@@ -1,30 +1,32 @@
 //
-//  ViewController.m
+//  PushViewController.m
 //  JustPrintLab
 //
 //  Created by 陈鑫荣 on 2018/1/6.
 //  Copyright © 2018年 justprint. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "PushViewController.h"
 
-@interface ViewController ()
+@interface PushViewController ()
 
 @end
 
-@implementation ViewController
+@implementation PushViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor=[UIColor yellowColor];
-
+    self.title=@"push";
+    [self.view setBackgroundColor:[UIColor whiteColor]];
 }
-
-
+-(void)viewWillAppear:(BOOL)animated{
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 
 @end

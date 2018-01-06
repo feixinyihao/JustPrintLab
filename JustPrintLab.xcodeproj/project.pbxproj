@@ -14,6 +14,15 @@
 		6966A18D20006440008176BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6966A18C20006440008176BA /* main.m */; };
 		6966A19720006440008176BA /* JustPrintLabTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6966A19620006440008176BA /* JustPrintLabTests.m */; };
 		6966A1A220006440008176BA /* JustPrintLabUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6966A1A120006440008176BA /* JustPrintLabUITests.m */; };
+		6966A1BE20006EAD008176BA /* CWInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6966A1B420006EAD008176BA /* CWInteractiveTransition.m */; };
+		6966A1BF20006EAD008176BA /* UIViewController+CWLateralSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = 6966A1B720006EAD008176BA /* UIViewController+CWLateralSlide.m */; };
+		6966A1C020006EAD008176BA /* CWLateralSlideAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6966A1BA20006EAD008176BA /* CWLateralSlideAnimator.m */; };
+		6966A1C120006EAD008176BA /* CWDrawerTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6966A1BB20006EAD008176BA /* CWDrawerTransition.m */; };
+		6966A1C220006EAD008176BA /* CWLateralSlideConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6966A1BD20006EAD008176BA /* CWLateralSlideConfiguration.m */; };
+		6966A1C82000871C008176BA /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6966A1C72000871C008176BA /* LeftViewController.m */; };
+		6966A1CA20008725008176BA /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6966A1C920008725008176BA /* 1.jpg */; };
+		6966A1CD20008A7E008176BA /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6966A1CC20008A7E008176BA /* PushViewController.m */; };
+		C530EB2E8077F592168A2829 /* libPods-JustPrintLab.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0221512E296E3850139E1147 /* libPods-JustPrintLab.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0221512E296E3850139E1147 /* libPods-JustPrintLab.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JustPrintLab.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A8ED010C8FF066056659580 /* Pods-JustPrintLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustPrintLab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JustPrintLab/Pods-JustPrintLab.debug.xcconfig"; sourceTree = "<group>"; };
 		6966A17A20006440008176BA /* JustPrintLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustPrintLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6966A17D20006440008176BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6966A17E20006440008176BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -49,6 +60,22 @@
 		6966A19D20006440008176BA /* JustPrintLabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JustPrintLabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6966A1A120006440008176BA /* JustPrintLabUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JustPrintLabUITests.m; sourceTree = "<group>"; };
 		6966A1A320006440008176BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6966A1B420006EAD008176BA /* CWInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWInteractiveTransition.m; sourceTree = "<group>"; };
+		6966A1B520006EAD008176BA /* CWDrawerTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWDrawerTransition.h; sourceTree = "<group>"; };
+		6966A1B620006EAD008176BA /* CWLateralSlideAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWLateralSlideAnimator.h; sourceTree = "<group>"; };
+		6966A1B720006EAD008176BA /* UIViewController+CWLateralSlide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CWLateralSlide.m"; sourceTree = "<group>"; };
+		6966A1B820006EAD008176BA /* CWLateralSlideConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWLateralSlideConfiguration.h; sourceTree = "<group>"; };
+		6966A1B920006EAD008176BA /* CWInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWInteractiveTransition.h; sourceTree = "<group>"; };
+		6966A1BA20006EAD008176BA /* CWLateralSlideAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWLateralSlideAnimator.m; sourceTree = "<group>"; };
+		6966A1BB20006EAD008176BA /* CWDrawerTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWDrawerTransition.m; sourceTree = "<group>"; };
+		6966A1BC20006EAD008176BA /* UIViewController+CWLateralSlide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CWLateralSlide.h"; sourceTree = "<group>"; };
+		6966A1BD20006EAD008176BA /* CWLateralSlideConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWLateralSlideConfiguration.m; sourceTree = "<group>"; };
+		6966A1C62000871C008176BA /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		6966A1C72000871C008176BA /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		6966A1C920008725008176BA /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		6966A1CB20008A7E008176BA /* PushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
+		6966A1CC20008A7E008176BA /* PushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
+		DAC8E3295285F2938969636C /* Pods-JustPrintLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustPrintLab.release.xcconfig"; path = "Pods/Target Support Files/Pods-JustPrintLab/Pods-JustPrintLab.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C530EB2E8077F592168A2829 /* libPods-JustPrintLab.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C08426FAC97117372208803 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A8ED010C8FF066056659580 /* Pods-JustPrintLab.debug.xcconfig */,
+				DAC8E3295285F2938969636C /* Pods-JustPrintLab.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6966A17120006440008176BA = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +120,8 @@
 				6966A19520006440008176BA /* JustPrintLabTests */,
 				6966A1A020006440008176BA /* JustPrintLabUITests */,
 				6966A17B20006440008176BA /* Products */,
+				1C08426FAC97117372208803 /* Pods */,
+				F5A7D965106A653A5A73933E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,14 +138,11 @@
 		6966A17C20006440008176BA /* JustPrintLab */ = {
 			isa = PBXGroup;
 			children = (
-				6966A17D20006440008176BA /* AppDelegate.h */,
-				6966A17E20006440008176BA /* AppDelegate.m */,
-				6966A18020006440008176BA /* ViewController.h */,
-				6966A18120006440008176BA /* ViewController.m */,
+				6966A1B220006EA4008176BA /* lib */,
+				6966A1B1200065FC008176BA /* main */,
+				6966A1AF200065D0008176BA /* other */,
 				6966A18620006440008176BA /* Assets.xcassets */,
-				6966A18820006440008176BA /* LaunchScreen.storyboard */,
 				6966A18B20006440008176BA /* Info.plist */,
-				6966A18C20006440008176BA /* main.m */,
 			);
 			path = JustPrintLab;
 			sourceTree = "<group>";
@@ -129,6 +165,64 @@
 			path = JustPrintLabUITests;
 			sourceTree = "<group>";
 		};
+		6966A1AF200065D0008176BA /* other */ = {
+			isa = PBXGroup;
+			children = (
+				6966A17D20006440008176BA /* AppDelegate.h */,
+				6966A17E20006440008176BA /* AppDelegate.m */,
+				6966A18820006440008176BA /* LaunchScreen.storyboard */,
+				6966A18C20006440008176BA /* main.m */,
+			);
+			path = other;
+			sourceTree = "<group>";
+		};
+		6966A1B1200065FC008176BA /* main */ = {
+			isa = PBXGroup;
+			children = (
+				6966A18020006440008176BA /* ViewController.h */,
+				6966A18120006440008176BA /* ViewController.m */,
+				6966A1C62000871C008176BA /* LeftViewController.h */,
+				6966A1C72000871C008176BA /* LeftViewController.m */,
+				6966A1CB20008A7E008176BA /* PushViewController.h */,
+				6966A1CC20008A7E008176BA /* PushViewController.m */,
+				6966A1C920008725008176BA /* 1.jpg */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		6966A1B220006EA4008176BA /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				6966A1B320006EAD008176BA /* CWLateralSlide */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		6966A1B320006EAD008176BA /* CWLateralSlide */ = {
+			isa = PBXGroup;
+			children = (
+				6966A1B420006EAD008176BA /* CWInteractiveTransition.m */,
+				6966A1B520006EAD008176BA /* CWDrawerTransition.h */,
+				6966A1B620006EAD008176BA /* CWLateralSlideAnimator.h */,
+				6966A1B720006EAD008176BA /* UIViewController+CWLateralSlide.m */,
+				6966A1B820006EAD008176BA /* CWLateralSlideConfiguration.h */,
+				6966A1B920006EAD008176BA /* CWInteractiveTransition.h */,
+				6966A1BA20006EAD008176BA /* CWLateralSlideAnimator.m */,
+				6966A1BB20006EAD008176BA /* CWDrawerTransition.m */,
+				6966A1BC20006EAD008176BA /* UIViewController+CWLateralSlide.h */,
+				6966A1BD20006EAD008176BA /* CWLateralSlideConfiguration.m */,
+			);
+			path = CWLateralSlide;
+			sourceTree = "<group>";
+		};
+		F5A7D965106A653A5A73933E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0221512E296E3850139E1147 /* libPods-JustPrintLab.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,9 +230,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6966A1A620006440008176BA /* Build configuration list for PBXNativeTarget "JustPrintLab" */;
 			buildPhases = (
+				1B7AC4D1A725F94930DF3ED6 /* [CP] Check Pods Manifest.lock */,
 				6966A17620006440008176BA /* Sources */,
 				6966A17720006440008176BA /* Frameworks */,
 				6966A17820006440008176BA /* Resources */,
+				0A746754E41DE80CD8B5D603 /* [CP] Embed Pods Frameworks */,
+				1017A4040DA802B608A15EE1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6966A1CA20008725008176BA /* 1.jpg in Resources */,
 				6966A18A20006440008176BA /* LaunchScreen.storyboard in Resources */,
 				6966A18720006440008176BA /* Assets.xcassets in Resources */,
 			);
@@ -256,14 +354,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A746754E41DE80CD8B5D603 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JustPrintLab/Pods-JustPrintLab-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1017A4040DA802B608A15EE1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JustPrintLab/Pods-JustPrintLab-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1B7AC4D1A725F94930DF3ED6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JustPrintLab-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6966A17620006440008176BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6966A1C220006EAD008176BA /* CWLateralSlideConfiguration.m in Sources */,
+				6966A1C82000871C008176BA /* LeftViewController.m in Sources */,
 				6966A18220006440008176BA /* ViewController.m in Sources */,
 				6966A18D20006440008176BA /* main.m in Sources */,
 				6966A17F20006440008176BA /* AppDelegate.m in Sources */,
+				6966A1BE20006EAD008176BA /* CWInteractiveTransition.m in Sources */,
+				6966A1CD20008A7E008176BA /* PushViewController.m in Sources */,
+				6966A1C120006EAD008176BA /* CWDrawerTransition.m in Sources */,
+				6966A1C020006EAD008176BA /* CWLateralSlideAnimator.m in Sources */,
+				6966A1BF20006EAD008176BA /* UIViewController+CWLateralSlide.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +572,7 @@
 		};
 		6966A1A720006440008176BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A8ED010C8FF066056659580 /* Pods-JustPrintLab.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -430,6 +587,7 @@
 		};
 		6966A1A820006440008176BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAC8E3295285F2938969636C /* Pods-JustPrintLab.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
