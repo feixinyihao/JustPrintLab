@@ -10,6 +10,7 @@
 #import "UIViewController+CWLateralSlide.h"
 #import "LeftViewController.h"
 #import "PushViewController.h"
+#import <MBProgressHUD.h>
 @interface ViewController ()
 
 @end
@@ -25,17 +26,61 @@
 
 }
 -(void)setupUI{
-    UIButton*btn=[[UIButton alloc]initWithFrame:CGRectMake(100, 200, 100, 60)];
-    [btn setTitle:@"click" forState:UIControlStateNormal];
-    [btn setBackgroundColor:[UIColor greenColor]];
-    [btn addTarget:self action:@selector(leftClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
+    //添加ScrollView
+    UIScrollView*scroll=[[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+    scroll.contentSize=CGSizeMake(ScreenWidth, ScreenHeight-64);
+    [self.view addSubview:scroll];
+    scroll.backgroundColor=JpColor(245, 245, 245);
+    scroll.showsVerticalScrollIndicator = NO;
+    //初始化头部UI
+    UIView*headView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenWidth*2/3)];
+    headView.backgroundColor=[UIColor whiteColor];
+    [scroll addSubview:headView];
     
-    UIButton*push=[[UIButton alloc]initWithFrame:CGRectMake(100, 400, 100, 60)];
-    [push setTitle:@"push" forState:UIControlStateNormal];
-    [push setBackgroundColor:[UIColor greenColor]];
-    [push addTarget:self action:@selector(mypush) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:push];
+    UIView*midView=[[UIView alloc]initWithFrame:CGRectMake(0,  ScreenWidth*2/3+20, (ScreenWidth-10)/2, (ScreenWidth-10)/4)];
+    midView.backgroundColor=[UIColor whiteColor];
+    
+    CGFloat scale=ScreenWidth/375;
+    UIImageView*scanImage=[[UIImageView alloc]initWithFrame:CGRectMake(20*scale, 20*scale, (ScreenWidth-10)/4-40*scale, (ScreenWidth-10)/4-40*scale)];
+    [scanImage setImage:[UIImage imageNamed:@"scanRec"]];
+    [midView addSubview:scanImage];
+    
+    UILabel*scanTitle=[[UILabel alloc]initWithFrame:CGRectMake((ScreenWidth-10)/4-20*scale, 20*scale, 100*scale, 25*scale)];
+    [scanTitle setText:@"扫描管理"];
+    scanTitle.font=[UIFont systemFontOfSize:14];
+    scanTitle.textColor=[UIColor blackColor];
+    [midView addSubview:scanTitle];
+    
+    UILabel*msgTitle=[[UILabel alloc]initWithFrame:CGRectMake((ScreenWidth-10)/4-20*scale, scale*50, 120*scale, 15*scale)];
+    [msgTitle setText:@"所有扫描件都在这里"];
+    msgTitle.font=[UIFont systemFontOfSize:10];
+    msgTitle.textColor=[UIColor blackColor];
+    [midView addSubview:msgTitle];
+    
+    [scroll addSubview:midView];
+    
+    UIView*midView1=[[UIView alloc]initWithFrame:CGRectMake((ScreenWidth-10)/2+10, ScreenWidth*2/3+20, (ScreenWidth-10)/2, (ScreenWidth-10)/4)];
+    midView1.backgroundColor=[UIColor whiteColor];
+    
+    
+    UIImageView*printImage=[[UIImageView alloc]initWithFrame:CGRectMake(20*scale, 20*scale, (ScreenWidth-10)/4-40*scale, (ScreenWidth-10)/4-40*scale)];
+    [printImage setImage:[UIImage imageNamed:@"printRec"]];
+    [midView1 addSubview:printImage];
+    
+    UILabel*printTitle=[[UILabel alloc]initWithFrame:CGRectMake((ScreenWidth-10)/4-20*scale, 20*scale, 100*scale, 25*scale)];
+    [printTitle setText:@"打印任务"];
+    printTitle.font=[UIFont systemFontOfSize:14];
+    printTitle.textColor=[UIColor blackColor];
+    [midView1 addSubview:printTitle];
+    
+    UILabel*printMsg=[[UILabel alloc]initWithFrame:CGRectMake((ScreenWidth-10)/4-20*scale, 50*scale, 120*scale, 15*scale)];
+    [printMsg setText:@"未输出的任务都在这"];
+    printMsg.font=[UIFont systemFontOfSize:10];
+    printMsg.textColor=[UIColor blackColor];
+    [midView1 addSubview:printMsg];
+    [scroll addSubview:midView1];
+                             
+    
 }
 -(void)setupSlideMenu{
     // 注册手势驱动
@@ -65,8 +110,13 @@
 
 
 -(void)mypush{
-    PushViewController*push=[[PushViewController alloc]init];
-    [self.navigationController pushViewController:push animated:YES];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    hud.label.text =@"成功了成功";
+    hud.margin=10;
+    hud.center=self.view.center;
+   // hud.offset = CGPointMake(0.f, MBProgressMaxOffset);
+    [hud hideAnimated:YES afterDelay:2.f];
 }
 
 

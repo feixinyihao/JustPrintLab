@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PushViewController : UIViewController
+@interface PushViewController : UITableViewController
 
 @end
