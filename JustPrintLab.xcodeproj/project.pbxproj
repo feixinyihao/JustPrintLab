@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		696203EA2015D74900402D0C /* ScanRec.m in Sources */ = {isa = PBXBuildFile; fileRef = 696203E82015D74900402D0C /* ScanRec.m */; };
+		696203ED2015D75100402D0C /* ScanRecCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 696203EC2015D75100402D0C /* ScanRecCell.m */; };
+		696203F02015E00600402D0C /* PrintJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 696203EE2015E00500402D0C /* PrintJob.m */; };
+		696203F32015E00E00402D0C /* PrintJobCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 696203F22015E00D00402D0C /* PrintJobCell.m */; };
+		696203F62015E20600402D0C /* PrintDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 696203F52015E20600402D0C /* PrintDetail.m */; };
+		696203FC201618AF00402D0C /* MBProgressHUD+JP.m in Sources */ = {isa = PBXBuildFile; fileRef = 696203FB201618AF00402D0C /* MBProgressHUD+JP.m */; };
 		6966A17F20006440008176BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6966A17E20006440008176BA /* AppDelegate.m */; };
 		6966A18220006440008176BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6966A18120006440008176BA /* ViewController.m */; };
 		6966A18720006440008176BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6966A18620006440008176BA /* Assets.xcassets */; };
@@ -22,12 +28,26 @@
 		6966A1C82000871C008176BA /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6966A1C72000871C008176BA /* LeftViewController.m */; };
 		6966A1CD20008A7E008176BA /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6966A1CC20008A7E008176BA /* PushViewController.m */; };
 		6966A1D02001AEC2008176BA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6966A1CF2001AEC2008176BA /* LoginViewController.m */; };
+		69AB86B220128F460060C19F /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AB86B120128F460060C19F /* HomeHeaderView.m */; };
+		69AB86B5201295580060C19F /* HomeMidView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AB86B4201295580060C19F /* HomeMidView.m */; };
+		69AB86C42012E5270060C19F /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AB86C32012E5270060C19F /* BaseNavigationController.m */; };
+		69AB86C72013317E0060C19F /* WalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AB86C62013317E0060C19F /* WalletViewController.m */; };
 		69E625D62011B27900A23880 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E625D42011B27900A23880 /* HomeTableViewController.m */; };
 		69E625DB2011B2B400A23880 /* WBTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E625D92011B2B400A23880 /* WBTabbar.m */; };
 		69E625DC2011B2B400A23880 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E625DA2011B2B400A23880 /* CustomButton.m */; };
 		69E625DF2011B75300A23880 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E625DE2011B75300A23880 /* MapViewController.m */; };
-		69E625E22011B76A00A23880 /* WalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E625E12011B76A00A23880 /* WalletViewController.m */; };
 		69E625E52011B77F00A23880 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E625E42011B77F00A23880 /* MeViewController.m */; };
+		69F7E73220136261007CFE9E /* SetupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F7E73120136261007CFE9E /* SetupTableViewController.m */; };
+		69F7E735201413BD007CFE9E /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F7E733201413BC007CFE9E /* LaunchViewController.m */; };
+		69F7E73920141411007CFE9E /* DrawCircleProgressButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F7E73820141411007CFE9E /* DrawCircleProgressButton.m */; };
+		69F7E73D20143B6D007CFE9E /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F7E73C20143B6D007CFE9E /* Account.m */; };
+		69F7E740201450F3007CFE9E /* UniHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F7E73F201450F3007CFE9E /* UniHttpTool.m */; };
+		69F7E7432014535A007CFE9E /* HyperlinksButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F7E7422014535A007CFE9E /* HyperlinksButton.m */; };
+		69F7E74620145513007CFE9E /* ProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F7E74420145513007CFE9E /* ProtocolViewController.m */; };
+		69F7E74920145F76007CFE9E /* CommonFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F7E74820145F76007CFE9E /* CommonFunc.m */; };
+		69F7E74F2015C1A6007CFE9E /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F7E74E2015C1A6007CFE9E /* BaseTableViewController.m */; };
+		69F7E7522015C30A007CFE9E /* ScanTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F7E7512015C30A007CFE9E /* ScanTableViewController.m */; };
+		69F7E7552015C4BD007CFE9E /* PrintTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F7E7542015C4BD007CFE9E /* PrintTableViewController.m */; };
 		C530EB2E8077F592168A2829 /* libPods-JustPrintLab.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0221512E296E3850139E1147 /* libPods-JustPrintLab.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +71,18 @@
 /* Begin PBXFileReference section */
 		0221512E296E3850139E1147 /* libPods-JustPrintLab.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JustPrintLab.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A8ED010C8FF066056659580 /* Pods-JustPrintLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustPrintLab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JustPrintLab/Pods-JustPrintLab.debug.xcconfig"; sourceTree = "<group>"; };
+		696203E82015D74900402D0C /* ScanRec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanRec.m; sourceTree = "<group>"; };
+		696203E92015D74900402D0C /* ScanRec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanRec.h; sourceTree = "<group>"; };
+		696203EB2015D75000402D0C /* ScanRecCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanRecCell.h; sourceTree = "<group>"; };
+		696203EC2015D75100402D0C /* ScanRecCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanRecCell.m; sourceTree = "<group>"; };
+		696203EE2015E00500402D0C /* PrintJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrintJob.m; sourceTree = "<group>"; };
+		696203EF2015E00500402D0C /* PrintJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintJob.h; sourceTree = "<group>"; };
+		696203F12015E00D00402D0C /* PrintJobCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintJobCell.h; sourceTree = "<group>"; };
+		696203F22015E00D00402D0C /* PrintJobCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrintJobCell.m; sourceTree = "<group>"; };
+		696203F42015E20500402D0C /* PrintDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintDetail.h; sourceTree = "<group>"; };
+		696203F52015E20600402D0C /* PrintDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrintDetail.m; sourceTree = "<group>"; };
+		696203FA201618AF00402D0C /* MBProgressHUD+JP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+JP.h"; sourceTree = "<group>"; };
+		696203FB201618AF00402D0C /* MBProgressHUD+JP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+JP.m"; sourceTree = "<group>"; };
 		6966A17A20006440008176BA /* JustPrintLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustPrintLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6966A17D20006440008176BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6966A17E20006440008176BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -82,6 +114,14 @@
 		6966A1CC20008A7E008176BA /* PushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
 		6966A1CE2001AEC2008176BA /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		6966A1CF2001AEC2008176BA /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		69AB86B020128F460060C19F /* HomeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeHeaderView.h; sourceTree = "<group>"; };
+		69AB86B120128F460060C19F /* HomeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderView.m; sourceTree = "<group>"; };
+		69AB86B3201295580060C19F /* HomeMidView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeMidView.h; sourceTree = "<group>"; };
+		69AB86B4201295580060C19F /* HomeMidView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeMidView.m; sourceTree = "<group>"; };
+		69AB86C22012E5270060C19F /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		69AB86C32012E5270060C19F /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		69AB86C52013317E0060C19F /* WalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalletViewController.h; sourceTree = "<group>"; };
+		69AB86C62013317E0060C19F /* WalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalletViewController.m; sourceTree = "<group>"; };
 		69E625C4200C6F2F00A23880 /* JustPrintLab.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JustPrintLab.pch; sourceTree = "<group>"; };
 		69E625D42011B27900A23880 /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
 		69E625D52011B27900A23880 /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
@@ -91,10 +131,30 @@
 		69E625DA2011B2B400A23880 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		69E625DD2011B75300A23880 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		69E625DE2011B75300A23880 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		69E625E02011B76A00A23880 /* WalletViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WalletViewController.h; sourceTree = "<group>"; };
-		69E625E12011B76A00A23880 /* WalletViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalletViewController.m; sourceTree = "<group>"; };
 		69E625E32011B77F00A23880 /* MeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
 		69E625E42011B77F00A23880 /* MeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
+		69F7E73020136261007CFE9E /* SetupTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetupTableViewController.h; sourceTree = "<group>"; };
+		69F7E73120136261007CFE9E /* SetupTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetupTableViewController.m; sourceTree = "<group>"; };
+		69F7E733201413BC007CFE9E /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
+		69F7E734201413BC007CFE9E /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
+		69F7E73720141411007CFE9E /* DrawCircleProgressButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawCircleProgressButton.h; sourceTree = "<group>"; };
+		69F7E73820141411007CFE9E /* DrawCircleProgressButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawCircleProgressButton.m; sourceTree = "<group>"; };
+		69F7E73B20143B6D007CFE9E /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		69F7E73C20143B6D007CFE9E /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		69F7E73E201450F3007CFE9E /* UniHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniHttpTool.h; sourceTree = "<group>"; };
+		69F7E73F201450F3007CFE9E /* UniHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniHttpTool.m; sourceTree = "<group>"; };
+		69F7E7412014535A007CFE9E /* HyperlinksButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HyperlinksButton.h; sourceTree = "<group>"; };
+		69F7E7422014535A007CFE9E /* HyperlinksButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HyperlinksButton.m; sourceTree = "<group>"; };
+		69F7E74420145513007CFE9E /* ProtocolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolViewController.m; sourceTree = "<group>"; };
+		69F7E74520145513007CFE9E /* ProtocolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolViewController.h; sourceTree = "<group>"; };
+		69F7E74720145F76007CFE9E /* CommonFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonFunc.h; sourceTree = "<group>"; };
+		69F7E74820145F76007CFE9E /* CommonFunc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonFunc.m; sourceTree = "<group>"; };
+		69F7E74D2015C1A6007CFE9E /* BaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		69F7E74E2015C1A6007CFE9E /* BaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		69F7E7502015C30A007CFE9E /* ScanTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanTableViewController.h; sourceTree = "<group>"; };
+		69F7E7512015C30A007CFE9E /* ScanTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanTableViewController.m; sourceTree = "<group>"; };
+		69F7E7532015C4BD007CFE9E /* PrintTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrintTableViewController.h; sourceTree = "<group>"; };
+		69F7E7542015C4BD007CFE9E /* PrintTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrintTableViewController.m; sourceTree = "<group>"; };
 		DAC8E3295285F2938969636C /* Pods-JustPrintLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustPrintLab.release.xcconfig"; path = "Pods/Target Support Files/Pods-JustPrintLab/Pods-JustPrintLab.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,6 +218,12 @@
 		6966A17C20006440008176BA /* JustPrintLab */ = {
 			isa = PBXGroup;
 			children = (
+				69AB86C12012E4F30060C19F /* base */,
+				69AB86BF2012C0A70060C19F /* leftside */,
+				69AB86BD2012AAF30060C19F /* login */,
+				69AB86BA2012AA9C0060C19F /* wallet */,
+				69AB86B82012AA730060C19F /* me */,
+				69AB86B62012AA3F0060C19F /* map */,
 				6966A1B220006EA4008176BA /* lib */,
 				6966A1B1200065FC008176BA /* main */,
 				6966A1AF200065D0008176BA /* other */,
@@ -200,22 +266,8 @@
 		6966A1B1200065FC008176BA /* main */ = {
 			isa = PBXGroup;
 			children = (
-				69E625E02011B76A00A23880 /* WalletViewController.h */,
-				69E625E12011B76A00A23880 /* WalletViewController.m */,
-				69E625DD2011B75300A23880 /* MapViewController.h */,
-				69E625DE2011B75300A23880 /* MapViewController.m */,
-				6966A18020006440008176BA /* ViewController.h */,
-				6966A18120006440008176BA /* ViewController.m */,
-				6966A1CE2001AEC2008176BA /* LoginViewController.h */,
-				6966A1CF2001AEC2008176BA /* LoginViewController.m */,
-				6966A1C62000871C008176BA /* LeftViewController.h */,
-				6966A1C72000871C008176BA /* LeftViewController.m */,
-				6966A1CB20008A7E008176BA /* PushViewController.h */,
-				6966A1CC20008A7E008176BA /* PushViewController.m */,
-				69E625D52011B27900A23880 /* HomeTableViewController.h */,
-				69E625D42011B27900A23880 /* HomeTableViewController.m */,
-				69E625E32011B77F00A23880 /* MeViewController.h */,
-				69E625E42011B77F00A23880 /* MeViewController.m */,
+				69AB86BC2012AAC60060C19F /* controller */,
+				69F7E73A20143B5D007CFE9E /* model */,
 				69E625C5200C93C400A23880 /* view */,
 			);
 			path = main;
@@ -224,6 +276,7 @@
 		6966A1B220006EA4008176BA /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				69F7E73620141411007CFE9E /* WSDrawCircleProgress */,
 				6966A1B320006EAD008176BA /* CWLateralSlide */,
 			);
 			path = lib;
@@ -246,15 +299,174 @@
 			path = CWLateralSlide;
 			sourceTree = "<group>";
 		};
+		69AB86B62012AA3F0060C19F /* map */ = {
+			isa = PBXGroup;
+			children = (
+				69AB86B72012AA500060C19F /* controller */,
+			);
+			path = map;
+			sourceTree = "<group>";
+		};
+		69AB86B72012AA500060C19F /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				69E625DD2011B75300A23880 /* MapViewController.h */,
+				69E625DE2011B75300A23880 /* MapViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		69AB86B82012AA730060C19F /* me */ = {
+			isa = PBXGroup;
+			children = (
+				69AB86B92012AA830060C19F /* controller */,
+			);
+			name = me;
+			sourceTree = "<group>";
+		};
+		69AB86B92012AA830060C19F /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				69E625E32011B77F00A23880 /* MeViewController.h */,
+				69E625E42011B77F00A23880 /* MeViewController.m */,
+				69F7E73020136261007CFE9E /* SetupTableViewController.h */,
+				69F7E73120136261007CFE9E /* SetupTableViewController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		69AB86BA2012AA9C0060C19F /* wallet */ = {
+			isa = PBXGroup;
+			children = (
+				69AB86BB2012AAA70060C19F /* controller */,
+			);
+			path = wallet;
+			sourceTree = "<group>";
+		};
+		69AB86BB2012AAA70060C19F /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				69AB86C52013317E0060C19F /* WalletViewController.h */,
+				69AB86C62013317E0060C19F /* WalletViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		69AB86BC2012AAC60060C19F /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				6966A18020006440008176BA /* ViewController.h */,
+				6966A18120006440008176BA /* ViewController.m */,
+				6966A1CB20008A7E008176BA /* PushViewController.h */,
+				6966A1CC20008A7E008176BA /* PushViewController.m */,
+				69E625D52011B27900A23880 /* HomeTableViewController.h */,
+				69E625D42011B27900A23880 /* HomeTableViewController.m */,
+				69F7E734201413BC007CFE9E /* LaunchViewController.h */,
+				69F7E733201413BC007CFE9E /* LaunchViewController.m */,
+				69F7E7502015C30A007CFE9E /* ScanTableViewController.h */,
+				69F7E7512015C30A007CFE9E /* ScanTableViewController.m */,
+				69F7E7532015C4BD007CFE9E /* PrintTableViewController.h */,
+				69F7E7542015C4BD007CFE9E /* PrintTableViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		69AB86BD2012AAF30060C19F /* login */ = {
+			isa = PBXGroup;
+			children = (
+				69AB86BE2012AAFB0060C19F /* controller */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		69AB86BE2012AAFB0060C19F /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				6966A1CE2001AEC2008176BA /* LoginViewController.h */,
+				6966A1CF2001AEC2008176BA /* LoginViewController.m */,
+				69F7E74520145513007CFE9E /* ProtocolViewController.h */,
+				69F7E74420145513007CFE9E /* ProtocolViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		69AB86BF2012C0A70060C19F /* leftside */ = {
+			isa = PBXGroup;
+			children = (
+				69AB86C02012C0E80060C19F /* controller */,
+			);
+			path = leftside;
+			sourceTree = "<group>";
+		};
+		69AB86C02012C0E80060C19F /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				6966A1C62000871C008176BA /* LeftViewController.h */,
+				6966A1C72000871C008176BA /* LeftViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		69AB86C12012E4F30060C19F /* base */ = {
+			isa = PBXGroup;
+			children = (
+				69AB86C22012E5270060C19F /* BaseNavigationController.h */,
+				69AB86C32012E5270060C19F /* BaseNavigationController.m */,
+				69F7E74D2015C1A6007CFE9E /* BaseTableViewController.h */,
+				69F7E74E2015C1A6007CFE9E /* BaseTableViewController.m */,
+				69F7E74720145F76007CFE9E /* CommonFunc.h */,
+				69F7E74820145F76007CFE9E /* CommonFunc.m */,
+				69F7E73E201450F3007CFE9E /* UniHttpTool.h */,
+				69F7E73F201450F3007CFE9E /* UniHttpTool.m */,
+				696203FA201618AF00402D0C /* MBProgressHUD+JP.h */,
+				696203FB201618AF00402D0C /* MBProgressHUD+JP.m */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
 		69E625C5200C93C400A23880 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				696203F12015E00D00402D0C /* PrintJobCell.h */,
+				696203F22015E00D00402D0C /* PrintJobCell.m */,
+				696203EB2015D75000402D0C /* ScanRecCell.h */,
+				696203EC2015D75100402D0C /* ScanRecCell.m */,
 				69E625D72011B2B400A23880 /* CustomButton.h */,
 				69E625DA2011B2B400A23880 /* CustomButton.m */,
 				69E625D82011B2B400A23880 /* WBTabbar.h */,
 				69E625D92011B2B400A23880 /* WBTabbar.m */,
+				69AB86B020128F460060C19F /* HomeHeaderView.h */,
+				69AB86B120128F460060C19F /* HomeHeaderView.m */,
+				69AB86B3201295580060C19F /* HomeMidView.h */,
+				69AB86B4201295580060C19F /* HomeMidView.m */,
+				69F7E7412014535A007CFE9E /* HyperlinksButton.h */,
+				69F7E7422014535A007CFE9E /* HyperlinksButton.m */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		69F7E73620141411007CFE9E /* WSDrawCircleProgress */ = {
+			isa = PBXGroup;
+			children = (
+				69F7E73720141411007CFE9E /* DrawCircleProgressButton.h */,
+				69F7E73820141411007CFE9E /* DrawCircleProgressButton.m */,
+			);
+			path = WSDrawCircleProgress;
+			sourceTree = "<group>";
+		};
+		69F7E73A20143B5D007CFE9E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				696203F42015E20500402D0C /* PrintDetail.h */,
+				696203F52015E20600402D0C /* PrintDetail.m */,
+				696203E92015D74900402D0C /* ScanRec.h */,
+				696203E82015D74900402D0C /* ScanRec.m */,
+				69F7E73B20143B6D007CFE9E /* Account.h */,
+				69F7E73C20143B6D007CFE9E /* Account.m */,
+				696203EF2015E00500402D0C /* PrintJob.h */,
+				696203EE2015E00500402D0C /* PrintJob.m */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		F5A7D965106A653A5A73933E /* Frameworks */ = {
@@ -417,9 +629,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JustPrintLab/Pods-JustPrintLab-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -451,23 +666,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69F7E73220136261007CFE9E /* SetupTableViewController.m in Sources */,
+				69AB86C72013317E0060C19F /* WalletViewController.m in Sources */,
 				6966A1C220006EAD008176BA /* CWLateralSlideConfiguration.m in Sources */,
+				696203F02015E00600402D0C /* PrintJob.m in Sources */,
+				696203EA2015D74900402D0C /* ScanRec.m in Sources */,
 				6966A1C82000871C008176BA /* LeftViewController.m in Sources */,
+				69F7E74F2015C1A6007CFE9E /* BaseTableViewController.m in Sources */,
 				6966A18220006440008176BA /* ViewController.m in Sources */,
+				69F7E7522015C30A007CFE9E /* ScanTableViewController.m in Sources */,
+				696203FC201618AF00402D0C /* MBProgressHUD+JP.m in Sources */,
 				6966A18D20006440008176BA /* main.m in Sources */,
+				69F7E7432014535A007CFE9E /* HyperlinksButton.m in Sources */,
+				69AB86C42012E5270060C19F /* BaseNavigationController.m in Sources */,
 				69E625D62011B27900A23880 /* HomeTableViewController.m in Sources */,
+				69F7E74620145513007CFE9E /* ProtocolViewController.m in Sources */,
 				6966A17F20006440008176BA /* AppDelegate.m in Sources */,
+				69F7E73D20143B6D007CFE9E /* Account.m in Sources */,
 				6966A1BE20006EAD008176BA /* CWInteractiveTransition.m in Sources */,
 				6966A1CD20008A7E008176BA /* PushViewController.m in Sources */,
 				6966A1C120006EAD008176BA /* CWDrawerTransition.m in Sources */,
-				69E625E22011B76A00A23880 /* WalletViewController.m in Sources */,
 				6966A1C020006EAD008176BA /* CWLateralSlideAnimator.m in Sources */,
 				69E625DC2011B2B400A23880 /* CustomButton.m in Sources */,
 				6966A1D02001AEC2008176BA /* LoginViewController.m in Sources */,
 				69E625DF2011B75300A23880 /* MapViewController.m in Sources */,
+				69F7E73920141411007CFE9E /* DrawCircleProgressButton.m in Sources */,
+				69F7E74920145F76007CFE9E /* CommonFunc.m in Sources */,
+				69AB86B5201295580060C19F /* HomeMidView.m in Sources */,
+				696203ED2015D75100402D0C /* ScanRecCell.m in Sources */,
+				69AB86B220128F460060C19F /* HomeHeaderView.m in Sources */,
 				6966A1BF20006EAD008176BA /* UIViewController+CWLateralSlide.m in Sources */,
+				69F7E7552015C4BD007CFE9E /* PrintTableViewController.m in Sources */,
 				69E625DB2011B2B400A23880 /* WBTabbar.m in Sources */,
 				69E625E52011B77F00A23880 /* MeViewController.m in Sources */,
+				696203F62015E20600402D0C /* PrintDetail.m in Sources */,
+				696203F32015E00E00402D0C /* PrintJobCell.m in Sources */,
+				69F7E735201413BD007CFE9E /* LaunchViewController.m in Sources */,
+				69F7E740201450F3007CFE9E /* UniHttpTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,6 +863,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/JustPrintLab/other/JustPrintLab.pch";
 				INFOPLIST_FILE = JustPrintLab/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.justprint.JustPrintLab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -645,6 +881,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/JustPrintLab/other/JustPrintLab.pch";
 				INFOPLIST_FILE = JustPrintLab/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.justprint.JustPrintLab;
 				PRODUCT_NAME = "$(TARGET_NAME)";

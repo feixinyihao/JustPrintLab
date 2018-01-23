@@ -16,7 +16,7 @@
         //        [self setBackgroundImage:[UIImage imageNamed:@"tabbar_slider"] forState:UIControlStateSelected];
         self.imageView.contentMode=  UIViewContentModeCenter;
         self.titleLabel.textAlignment=NSTextAlignmentCenter;
-        self.titleLabel.font=[UIFont systemFontOfSize:14];
+        self.titleLabel.font=[UIFont systemFontOfSize:12];
         [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         
     }

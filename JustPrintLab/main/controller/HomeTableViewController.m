@@ -11,7 +11,7 @@
 #import "MapViewController.h"
 #import "WalletViewController.h"
 #import "MeViewController.h"
-
+#import "BaseNavigationController.h"
 @interface HomeTableViewController ()
 
 @end
@@ -41,7 +41,7 @@
     
     childView.tabBarItem.image=[[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     childView.tabBarItem.selectedImage=[[UIImage imageNamed:selectedImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UINavigationController * childViewNav=[[UINavigationController alloc]initWithRootViewController:childView];
+    BaseNavigationController * childViewNav=[[BaseNavigationController alloc]initWithRootViewController:childView];
     [self addChildViewController:childViewNav];
     
 }

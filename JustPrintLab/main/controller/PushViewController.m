@@ -17,14 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title=@"push";
+    self.title=@"测试";
     [self.view setBackgroundColor:[UIColor whiteColor]];
     self.tableView.emptyDataSetSource = self;
     self.tableView.emptyDataSetDelegate = self;
     
     // 删除单元格分隔线的一个小技巧
     self.tableView.tableFooterView = [UIView new];
-    
+
     
 }
 

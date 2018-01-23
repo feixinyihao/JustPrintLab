@@ -8,17 +8,19 @@
 
 #import "LeftViewController.h"
 #import "PushViewController.h"
-
+#import "SetupTableViewController.h"
 #import "UIViewController+CWLateralSlide.h"
-
-
-
+#import "UniHttpTool.h"
+#import <UIImageView+WebCache.h>
+#import "CommonFunc.h"
+#import "MBProgressHUD+JP.h"
 @interface LeftViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,weak) UITableView *tableView;
 @property (nonatomic,strong) NSArray *imageArray;
 @property (nonatomic,strong) NSArray *titleArray;
 
+@property(nonatomic,weak)UILabel*balanceL;
 @end
 
 @implementation LeftViewController
@@ -35,7 +37,7 @@
 - (NSArray *)titleArray{
     if (_titleArray == nil) {
         if (_drawerType == DrawerDefaultRight || _drawerType == DrawerTypeMaskRight) {
-            _titleArray = @[@"Push下一个界面",@"Push下一个界面",@"Push下一个界面",@"Push下一个界面",@"Push下一个界面",@"Push下一个界面"];
+            _titleArray = @[];
         }else {
             _titleArray = @[@"密码管理",@"邮箱管理",@"钱包管理",@"客服电话",@"开具发票",@"历史记录"];
         }
@@ -69,9 +71,8 @@
     
     [self setupTableView];
     [self setupBoom];
-    
+   
 }
-
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
@@ -90,6 +91,7 @@
     }
 
     self.view.frame = rect;
+    [self get_balance];
 }
 
 
@@ -114,8 +116,13 @@
     UIImageView*headerView=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth*0.75, ScreenWidth*0.75*4/7)];
     [headerView setImage:[UIImage imageNamed:@"printer_dft"]];
     [self.view addSubview:headerView];
-    UIImageView*header=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"icon"]];
-    header.frame=CGRectMake(20, ScreenWidth*0.75*4/7-80, 40, 40);
+    UIImageView*header=[[UIImageView alloc]initWithFrame:CGRectMake(20, ScreenWidth*0.75*4/7-80, 40, 40)];
+    if ([UniHttpTool isWechatOrAlipay]) {
+        [header sd_setImageWithURL:[NSURL URLWithString:[UniHttpTool getHeadImgUrl]] placeholderImage:[UIImage imageNamed:@"icon"]];
+    }else{
+        [header setImage:[UIImage imageNamed:@"icon"]];
+    }
+    
     header.layer.masksToBounds=YES;
     header.layer.cornerRadius=20;
     header.layer.borderColor=[UIColor whiteColor].CGColor;
@@ -123,18 +130,30 @@
     [headerView addSubview:header];
     
     UILabel*trueNameL=[[UILabel alloc]initWithFrame:CGRectMake(70, ScreenWidth*0.75*4/7-80, 200, 20)];
-    trueNameL.text=@"15158114882";
+    trueNameL.text=[UniHttpTool getShowName];
     trueNameL.font=[UIFont systemFontOfSize:14];
     trueNameL.textColor=[UIColor whiteColor];
     [headerView addSubview:trueNameL];
     
     UILabel*balanceL=[[UILabel alloc]initWithFrame:CGRectMake(70, ScreenWidth*0.75*4/7-60, 200, 20)];
-    balanceL.text=@"余额: 1.02";
+    balanceL.text=[NSString stringWithFormat:@"余额:%.2f",([UniHttpTool getNativeBalance]+[UniHttpTool getNativeSubsidy])/100.0];
+    self.balanceL=balanceL;
     balanceL.font=[UIFont systemFontOfSize:13];
     balanceL.textColor=[UIColor whiteColor];
-    [headerView addSubview:balanceL];
+    [headerView addSubview:self.balanceL];
 
 
+}
+-(void)get_balance{
+ 
+    [CommonFunc getBalance:^(id json) {
+        if ([json[@"ret"] integerValue]==1) {
+            NSDictionary*dataDic=json[@"data"];
+            NSInteger balance=[dataDic[@"dwBalance"] integerValue]+[dataDic[@"dwSubsidy"]integerValue];
+            self.balanceL.text=[NSString stringWithFormat:@"余额:%.2f",balance/100.0];
+        }
+    }];
+   
 }
 
 /**
@@ -144,6 +163,7 @@
     UIButton*setupBtn=[[UIButton alloc]initWithFrame:CGRectMake(20, ScreenHeight-40,60,40)];
     [setupBtn setImage:[UIImage imageNamed:@"setup"] forState:UIControlStateNormal];
     [setupBtn setTitle:@"设置" forState:UIControlStateNormal];
+    [setupBtn addTarget:self action:@selector(setup) forControlEvents:UIControlEventTouchUpInside];
     [setupBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     setupBtn.titleLabel.font=[UIFont systemFontOfSize:13];
     [self.view addSubview:setupBtn];
@@ -155,7 +175,10 @@
     aboutBtn.titleLabel.font=[UIFont systemFontOfSize:13];
     [self.view addSubview:aboutBtn];
 }
-
+-(void)setup{
+    SetupTableViewController*setup=[[SetupTableViewController alloc]init];
+    [self cw_pushViewController:setup];
+}
 - (void)dealloc {
     DLog(@"%s",__func__);
 }

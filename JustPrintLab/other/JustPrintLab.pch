@@ -9,22 +9,31 @@
 #ifndef JustPrintLab_pch
 #define JustPrintLab_pch
 
-#define ScreenWidth [UIScreen mainScreen].bounds.size.width
-
-#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+#define  ScreenHeight ([UIScreen mainScreen].bounds.size.height==812.0?[UIScreen mainScreen].bounds.size.height-34-24:[UIScreen mainScreen].bounds.size.height)
+#define  ScreenWidth [UIScreen mainScreen].bounds.size.width
 
 #define JpColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 
 
+#define mainColor JpColor(27, 161, 232)
+#define kAppId  [NSString stringWithFormat:@"1160633391"]
+//主目录
+#define DocumentFile [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject]
+
+#define UID [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+
+//app版本号
+#define currentVersion  [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"]
 
 #ifdef DEBUG    //调试阶段
 
 #define DLog(...) NSLog(__VA_ARGS__)
 
+#define RootURL   [NSString stringWithFormat:@"http://wmake.com.cn"]
 #else   //发布
 
 #define DLog(...)
-
+#define RootURL   [NSString stringWithFormat:@"https://justprint.com.cn"]
 
 #endif
 
