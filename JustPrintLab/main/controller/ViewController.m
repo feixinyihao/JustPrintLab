@@ -9,12 +9,13 @@
 #import "ViewController.h"
 #import "UIViewController+CWLateralSlide.h"
 #import "LeftViewController.h"
-#import <MBProgressHUD.h>
+#import "MBProgressHUD.h"
 #import "HomeHeaderView.h"
 #import "HomeMidView.h"
 #import "ScanTableViewController.h"
 #import "PrintTableViewController.h"
 #import "CommonFunc.h"
+
 @interface ViewController ()<HomeHeaderViewDelegate>
 
 @end
@@ -32,7 +33,7 @@
 
 
     //更改状态栏颜色
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
 
    
 
@@ -101,11 +102,9 @@
 
 -(void)leftMidViewAction:(id)sender{
 
-    [CommonFunc backToLogon];
-    /*
+   
     ScanTableViewController*scan=[[ScanTableViewController alloc]init];
     [self.navigationController pushViewController:scan animated:YES];
-     */
 }
 -(void)rightMidViewAction:(id)sender{
     PrintTableViewController*print=[[PrintTableViewController alloc]init];

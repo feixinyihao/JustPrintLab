@@ -46,7 +46,8 @@
     }];
    
     [self.view addSubview:imageview];
-    DrawCircleProgressButton *drawCircleView = [[DrawCircleProgressButton alloc]initWithFrame:CGRectMake(ScreenWidth - 55, 30, 40, 40)];
+    CGFloat y=kIs_iPhoneX?54:30;
+    DrawCircleProgressButton *drawCircleView = [[DrawCircleProgressButton alloc]initWithFrame:CGRectMake(ScreenWidth - 55, y, 40, 40)];
     drawCircleView.lineWidth = 2;
     drawCircleView.progressColor=mainColor;
     NSString*skip=@"跳过";

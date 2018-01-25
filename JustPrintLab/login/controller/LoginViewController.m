@@ -13,7 +13,7 @@
 #import "CommonFunc.h"
 #import "UniHttpTool.h"
 #import "Account.h"
-#import "MBProgressHUD+JP.h"
+#import "MBProgressHUD+MJ.h"
 @interface LoginViewController ()
 @property(nonatomic,weak)UIButton*yanBtn;
 @property(nonatomic,weak)UITextField*userText;
@@ -135,7 +135,10 @@
  登录
  */
 -(void)logon{
-    
+    if ([[CommonFunc stringByTrim:self.userText.text] isEqualToString:@""]||[[CommonFunc stringByTrim:self.yanText.text] isEqualToString:@""]) {
+        [MBProgressHUD showText:@"请先输入验证码!"];
+        return;
+    }
     NSString*url=[NSString stringWithFormat:@"%@/ajax/cac.aspx?act=register",RootURL];
     NSDictionary*parm=@{@"pid":self.userText.text,@"sms":self.yanText.text,@"pwd":self.userText.text};
     

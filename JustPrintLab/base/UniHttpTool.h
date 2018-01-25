@@ -33,17 +33,19 @@
            success:(void (^)(id  json))success
            failure:(void (^)(NSError *error))failure;
 
+
+
++(void)uploadWithparameters:(id)parameters
+                     name:(NSString *)name
+                 filename:(NSString*)filename
+               uploadData:(NSData*)data
+                 mineType:(NSString*)mineType
+                  success:(void (^)(id  json))success;
+
 +(void)AFNetworkStatus;
 
 
-+(void)postWithparameters:(id)parameters
-         image:(UIImage*)image
-              name:(NSString *)name
-          filename:(NSString*)filename
-       constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))FData
-          uploadFileProgress:(void (^)(NSProgress *progress))uploadFileProgress
-           success:(void (^)(id  json))success
-           failure:(void (^)(NSError *error))failure;
+
 
 
 +(NSString*)getLogonName;

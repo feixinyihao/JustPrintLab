@@ -12,7 +12,16 @@
 		696203F02015E00600402D0C /* PrintJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 696203EE2015E00500402D0C /* PrintJob.m */; };
 		696203F32015E00E00402D0C /* PrintJobCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 696203F22015E00D00402D0C /* PrintJobCell.m */; };
 		696203F62015E20600402D0C /* PrintDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 696203F52015E20600402D0C /* PrintDetail.m */; };
-		696203FC201618AF00402D0C /* MBProgressHUD+JP.m in Sources */ = {isa = PBXBuildFile; fileRef = 696203FB201618AF00402D0C /* MBProgressHUD+JP.m */; };
+		696203FF2016CA6200402D0C /* PrintUploadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 696203FE2016CA6200402D0C /* PrintUploadView.m */; };
+		696204022016D67600402D0C /* UploadButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 696204012016D67500402D0C /* UploadButton.m */; };
+		6962040920173D2F00402D0C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6962040420173D2F00402D0C /* MBProgressHUD.m */; };
+		6962040A20173D2F00402D0C /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 6962040720173D2F00402D0C /* MBProgressHUD+MJ.m */; };
+		6962040B20173D2F00402D0C /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6962040820173D2F00402D0C /* MBProgressHUD.bundle */; };
+		6962040E201752DD00402D0C /* PayRecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6962040C201752DD00402D0C /* PayRecViewController.m */; };
+		69620411201752F700402D0C /* RefoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69620410201752F700402D0C /* RefoundViewController.m */; };
+		696204152017533600402D0C /* PayRecTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 696204142017533600402D0C /* PayRecTableViewCell.m */; };
+		69620419201753FE00402D0C /* PayRec.m in Sources */ = {isa = PBXBuildFile; fileRef = 69620418201753FE00402D0C /* PayRec.m */; };
+		6962041D201814B100402D0C /* PrintConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6962041C201814B100402D0C /* PrintConfigViewController.m */; };
 		6966A17F20006440008176BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6966A17E20006440008176BA /* AppDelegate.m */; };
 		6966A18220006440008176BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6966A18120006440008176BA /* ViewController.m */; };
 		6966A18720006440008176BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6966A18620006440008176BA /* Assets.xcassets */; };
@@ -28,6 +37,15 @@
 		6966A1C82000871C008176BA /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6966A1C72000871C008176BA /* LeftViewController.m */; };
 		6966A1CD20008A7E008176BA /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6966A1CC20008A7E008176BA /* PushViewController.m */; };
 		6966A1D02001AEC2008176BA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6966A1CF2001AEC2008176BA /* LoginViewController.m */; };
+		699A06F62018577700DD4461 /* IFMMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 699A06EE2018577700DD4461 /* IFMMenuView.m */; };
+		699A06F72018577700DD4461 /* IFMMenuContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 699A06F02018577700DD4461 /* IFMMenuContainerView.m */; };
+		699A06F82018577700DD4461 /* IFMMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 699A06F12018577700DD4461 /* IFMMenuItem.m */; };
+		699A06F92018577700DD4461 /* IFMMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 699A06F52018577700DD4461 /* IFMMenu.m */; };
+		699A06FC2018585800DD4461 /* PrintMemu.m in Sources */ = {isa = PBXBuildFile; fileRef = 699A06FB2018585800DD4461 /* PrintMemu.m */; };
+		699A07042018895D00DD4461 /* HQStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = 699A06FE2018895C00DD4461 /* HQStepper.m */; };
+		699A07052018895D00DD4461 /* UIColor+HQStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = 699A07012018895C00DD4461 /* UIColor+HQStepper.m */; };
+		699A07062018895D00DD4461 /* HQStepperButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 699A07032018895C00DD4461 /* HQStepperButton.m */; };
+		699A070C20194F3300DD4461 /* SelectedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 699A070B20194F3300DD4461 /* SelectedButton.m */; };
 		69AB86B220128F460060C19F /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AB86B120128F460060C19F /* HomeHeaderView.m */; };
 		69AB86B5201295580060C19F /* HomeMidView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AB86B4201295580060C19F /* HomeMidView.m */; };
 		69AB86C42012E5270060C19F /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AB86C32012E5270060C19F /* BaseNavigationController.m */; };
@@ -81,8 +99,26 @@
 		696203F22015E00D00402D0C /* PrintJobCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrintJobCell.m; sourceTree = "<group>"; };
 		696203F42015E20500402D0C /* PrintDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintDetail.h; sourceTree = "<group>"; };
 		696203F52015E20600402D0C /* PrintDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrintDetail.m; sourceTree = "<group>"; };
-		696203FA201618AF00402D0C /* MBProgressHUD+JP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+JP.h"; sourceTree = "<group>"; };
-		696203FB201618AF00402D0C /* MBProgressHUD+JP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+JP.m"; sourceTree = "<group>"; };
+		696203FD2016CA6200402D0C /* PrintUploadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrintUploadView.h; sourceTree = "<group>"; };
+		696203FE2016CA6200402D0C /* PrintUploadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrintUploadView.m; sourceTree = "<group>"; };
+		696204002016D67500402D0C /* UploadButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadButton.h; sourceTree = "<group>"; };
+		696204012016D67500402D0C /* UploadButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadButton.m; sourceTree = "<group>"; };
+		6962040420173D2F00402D0C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		6962040520173D2F00402D0C /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
+		6962040620173D2F00402D0C /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		6962040720173D2F00402D0C /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		6962040820173D2F00402D0C /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		6962040C201752DD00402D0C /* PayRecViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayRecViewController.m; sourceTree = "<group>"; };
+		6962040D201752DD00402D0C /* PayRecViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayRecViewController.h; sourceTree = "<group>"; };
+		6962040F201752F600402D0C /* RefoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefoundViewController.h; sourceTree = "<group>"; };
+		69620410201752F700402D0C /* RefoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefoundViewController.m; sourceTree = "<group>"; };
+		696204132017533600402D0C /* PayRecTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayRecTableViewCell.h; sourceTree = "<group>"; };
+		696204142017533600402D0C /* PayRecTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayRecTableViewCell.m; sourceTree = "<group>"; };
+		69620417201753FD00402D0C /* PayRec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayRec.h; sourceTree = "<group>"; };
+		69620418201753FE00402D0C /* PayRec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayRec.m; sourceTree = "<group>"; };
+		6962041A20176A8900402D0C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		6962041B201814B100402D0C /* PrintConfigViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrintConfigViewController.h; sourceTree = "<group>"; };
+		6962041C201814B100402D0C /* PrintConfigViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrintConfigViewController.m; sourceTree = "<group>"; };
 		6966A17A20006440008176BA /* JustPrintLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustPrintLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6966A17D20006440008176BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6966A17E20006440008176BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -114,6 +150,24 @@
 		6966A1CC20008A7E008176BA /* PushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
 		6966A1CE2001AEC2008176BA /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		6966A1CF2001AEC2008176BA /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		699A06EE2018577700DD4461 /* IFMMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFMMenuView.m; sourceTree = "<group>"; };
+		699A06EF2018577700DD4461 /* IFMMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFMMenu.h; sourceTree = "<group>"; };
+		699A06F02018577700DD4461 /* IFMMenuContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFMMenuContainerView.m; sourceTree = "<group>"; };
+		699A06F12018577700DD4461 /* IFMMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFMMenuItem.m; sourceTree = "<group>"; };
+		699A06F22018577700DD4461 /* IFMMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFMMenuView.h; sourceTree = "<group>"; };
+		699A06F32018577700DD4461 /* IFMMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFMMenuItem.h; sourceTree = "<group>"; };
+		699A06F42018577700DD4461 /* IFMMenuContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFMMenuContainerView.h; sourceTree = "<group>"; };
+		699A06F52018577700DD4461 /* IFMMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFMMenu.m; sourceTree = "<group>"; };
+		699A06FA2018585800DD4461 /* PrintMemu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrintMemu.h; sourceTree = "<group>"; };
+		699A06FB2018585800DD4461 /* PrintMemu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrintMemu.m; sourceTree = "<group>"; };
+		699A06FE2018895C00DD4461 /* HQStepper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQStepper.m; sourceTree = "<group>"; };
+		699A06FF2018895C00DD4461 /* UIColor+HQStepper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HQStepper.h"; sourceTree = "<group>"; };
+		699A07002018895C00DD4461 /* HQStepperButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQStepperButton.h; sourceTree = "<group>"; };
+		699A07012018895C00DD4461 /* UIColor+HQStepper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HQStepper.m"; sourceTree = "<group>"; };
+		699A07022018895C00DD4461 /* HQStepper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQStepper.h; sourceTree = "<group>"; };
+		699A07032018895C00DD4461 /* HQStepperButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQStepperButton.m; sourceTree = "<group>"; };
+		699A070A20194F3300DD4461 /* SelectedButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectedButton.h; sourceTree = "<group>"; };
+		699A070B20194F3300DD4461 /* SelectedButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectedButton.m; sourceTree = "<group>"; };
 		69AB86B020128F460060C19F /* HomeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeHeaderView.h; sourceTree = "<group>"; };
 		69AB86B120128F460060C19F /* HomeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderView.m; sourceTree = "<group>"; };
 		69AB86B3201295580060C19F /* HomeMidView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeMidView.h; sourceTree = "<group>"; };
@@ -191,6 +245,36 @@
 				DAC8E3295285F2938969636C /* Pods-JustPrintLab.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		6962040320173D2F00402D0C /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				6962040420173D2F00402D0C /* MBProgressHUD.m */,
+				6962040620173D2F00402D0C /* MBProgressHUD.h */,
+				6962040520173D2F00402D0C /* MBProgressHUD+MJ.h */,
+				6962040720173D2F00402D0C /* MBProgressHUD+MJ.m */,
+				6962040820173D2F00402D0C /* MBProgressHUD.bundle */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		696204122017531200402D0C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				696204132017533600402D0C /* PayRecTableViewCell.h */,
+				696204142017533600402D0C /* PayRecTableViewCell.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		69620416201753F300402D0C /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				69620417201753FD00402D0C /* PayRec.h */,
+				69620418201753FE00402D0C /* PayRec.m */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		6966A17120006440008176BA = {
@@ -276,6 +360,9 @@
 		6966A1B220006EA4008176BA /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				699A06FD2018895C00DD4461 /* HQStepper */,
+				699A06ED2018577700DD4461 /* IFMMenu */,
+				6962040320173D2F00402D0C /* MBProgressHUD */,
 				69F7E73620141411007CFE9E /* WSDrawCircleProgress */,
 				6966A1B320006EAD008176BA /* CWLateralSlide */,
 			);
@@ -297,6 +384,34 @@
 				6966A1BD20006EAD008176BA /* CWLateralSlideConfiguration.m */,
 			);
 			path = CWLateralSlide;
+			sourceTree = "<group>";
+		};
+		699A06ED2018577700DD4461 /* IFMMenu */ = {
+			isa = PBXGroup;
+			children = (
+				699A06F22018577700DD4461 /* IFMMenuView.h */,
+				699A06EE2018577700DD4461 /* IFMMenuView.m */,
+				699A06EF2018577700DD4461 /* IFMMenu.h */,
+				699A06F52018577700DD4461 /* IFMMenu.m */,
+				699A06F32018577700DD4461 /* IFMMenuItem.h */,
+				699A06F12018577700DD4461 /* IFMMenuItem.m */,
+				699A06F42018577700DD4461 /* IFMMenuContainerView.h */,
+				699A06F02018577700DD4461 /* IFMMenuContainerView.m */,
+			);
+			path = IFMMenu;
+			sourceTree = "<group>";
+		};
+		699A06FD2018895C00DD4461 /* HQStepper */ = {
+			isa = PBXGroup;
+			children = (
+				699A07022018895C00DD4461 /* HQStepper.h */,
+				699A06FE2018895C00DD4461 /* HQStepper.m */,
+				699A06FF2018895C00DD4461 /* UIColor+HQStepper.h */,
+				699A07012018895C00DD4461 /* UIColor+HQStepper.m */,
+				699A07002018895C00DD4461 /* HQStepperButton.h */,
+				699A07032018895C00DD4461 /* HQStepperButton.m */,
+			);
+			path = HQStepper;
 			sourceTree = "<group>";
 		};
 		69AB86B62012AA3F0060C19F /* map */ = {
@@ -338,6 +453,8 @@
 		69AB86BA2012AA9C0060C19F /* wallet */ = {
 			isa = PBXGroup;
 			children = (
+				69620416201753F300402D0C /* New Group */,
+				696204122017531200402D0C /* view */,
 				69AB86BB2012AAA70060C19F /* controller */,
 			);
 			path = wallet;
@@ -348,6 +465,10 @@
 			children = (
 				69AB86C52013317E0060C19F /* WalletViewController.h */,
 				69AB86C62013317E0060C19F /* WalletViewController.m */,
+				6962040F201752F600402D0C /* RefoundViewController.h */,
+				69620410201752F700402D0C /* RefoundViewController.m */,
+				6962040D201752DD00402D0C /* PayRecViewController.h */,
+				6962040C201752DD00402D0C /* PayRecViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -367,6 +488,8 @@
 				69F7E7512015C30A007CFE9E /* ScanTableViewController.m */,
 				69F7E7532015C4BD007CFE9E /* PrintTableViewController.h */,
 				69F7E7542015C4BD007CFE9E /* PrintTableViewController.m */,
+				6962041B201814B100402D0C /* PrintConfigViewController.h */,
+				6962041C201814B100402D0C /* PrintConfigViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -418,8 +541,6 @@
 				69F7E74820145F76007CFE9E /* CommonFunc.m */,
 				69F7E73E201450F3007CFE9E /* UniHttpTool.h */,
 				69F7E73F201450F3007CFE9E /* UniHttpTool.m */,
-				696203FA201618AF00402D0C /* MBProgressHUD+JP.h */,
-				696203FB201618AF00402D0C /* MBProgressHUD+JP.m */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -427,6 +548,10 @@
 		69E625C5200C93C400A23880 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				699A070A20194F3300DD4461 /* SelectedButton.h */,
+				699A070B20194F3300DD4461 /* SelectedButton.m */,
+				696204002016D67500402D0C /* UploadButton.h */,
+				696204012016D67500402D0C /* UploadButton.m */,
 				696203F12015E00D00402D0C /* PrintJobCell.h */,
 				696203F22015E00D00402D0C /* PrintJobCell.m */,
 				696203EB2015D75000402D0C /* ScanRecCell.h */,
@@ -441,6 +566,10 @@
 				69AB86B4201295580060C19F /* HomeMidView.m */,
 				69F7E7412014535A007CFE9E /* HyperlinksButton.h */,
 				69F7E7422014535A007CFE9E /* HyperlinksButton.m */,
+				696203FD2016CA6200402D0C /* PrintUploadView.h */,
+				696203FE2016CA6200402D0C /* PrintUploadView.m */,
+				699A06FA2018585800DD4461 /* PrintMemu.h */,
+				699A06FB2018585800DD4461 /* PrintMemu.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -588,6 +717,7 @@
 			files = (
 				6966A18A20006440008176BA /* LaunchScreen.storyboard in Resources */,
 				6966A18720006440008176BA /* Assets.xcassets in Resources */,
+				6962040B20173D2F00402D0C /* MBProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,6 +761,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-JustPrintLab/Pods-JustPrintLab-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -670,38 +801,55 @@
 				69AB86C72013317E0060C19F /* WalletViewController.m in Sources */,
 				6966A1C220006EAD008176BA /* CWLateralSlideConfiguration.m in Sources */,
 				696203F02015E00600402D0C /* PrintJob.m in Sources */,
+				699A06F62018577700DD4461 /* IFMMenuView.m in Sources */,
 				696203EA2015D74900402D0C /* ScanRec.m in Sources */,
+				699A07052018895D00DD4461 /* UIColor+HQStepper.m in Sources */,
 				6966A1C82000871C008176BA /* LeftViewController.m in Sources */,
 				69F7E74F2015C1A6007CFE9E /* BaseTableViewController.m in Sources */,
+				699A06F82018577700DD4461 /* IFMMenuItem.m in Sources */,
+				6962040920173D2F00402D0C /* MBProgressHUD.m in Sources */,
+				6962040A20173D2F00402D0C /* MBProgressHUD+MJ.m in Sources */,
 				6966A18220006440008176BA /* ViewController.m in Sources */,
 				69F7E7522015C30A007CFE9E /* ScanTableViewController.m in Sources */,
-				696203FC201618AF00402D0C /* MBProgressHUD+JP.m in Sources */,
+				6962040E201752DD00402D0C /* PayRecViewController.m in Sources */,
 				6966A18D20006440008176BA /* main.m in Sources */,
 				69F7E7432014535A007CFE9E /* HyperlinksButton.m in Sources */,
 				69AB86C42012E5270060C19F /* BaseNavigationController.m in Sources */,
+				6962041D201814B100402D0C /* PrintConfigViewController.m in Sources */,
 				69E625D62011B27900A23880 /* HomeTableViewController.m in Sources */,
 				69F7E74620145513007CFE9E /* ProtocolViewController.m in Sources */,
 				6966A17F20006440008176BA /* AppDelegate.m in Sources */,
+				696204152017533600402D0C /* PayRecTableViewCell.m in Sources */,
 				69F7E73D20143B6D007CFE9E /* Account.m in Sources */,
 				6966A1BE20006EAD008176BA /* CWInteractiveTransition.m in Sources */,
 				6966A1CD20008A7E008176BA /* PushViewController.m in Sources */,
+				699A06FC2018585800DD4461 /* PrintMemu.m in Sources */,
+				699A06F72018577700DD4461 /* IFMMenuContainerView.m in Sources */,
+				696203FF2016CA6200402D0C /* PrintUploadView.m in Sources */,
 				6966A1C120006EAD008176BA /* CWDrawerTransition.m in Sources */,
 				6966A1C020006EAD008176BA /* CWLateralSlideAnimator.m in Sources */,
+				696204022016D67600402D0C /* UploadButton.m in Sources */,
 				69E625DC2011B2B400A23880 /* CustomButton.m in Sources */,
 				6966A1D02001AEC2008176BA /* LoginViewController.m in Sources */,
+				699A07062018895D00DD4461 /* HQStepperButton.m in Sources */,
 				69E625DF2011B75300A23880 /* MapViewController.m in Sources */,
+				69620411201752F700402D0C /* RefoundViewController.m in Sources */,
 				69F7E73920141411007CFE9E /* DrawCircleProgressButton.m in Sources */,
 				69F7E74920145F76007CFE9E /* CommonFunc.m in Sources */,
 				69AB86B5201295580060C19F /* HomeMidView.m in Sources */,
 				696203ED2015D75100402D0C /* ScanRecCell.m in Sources */,
 				69AB86B220128F460060C19F /* HomeHeaderView.m in Sources */,
+				699A070C20194F3300DD4461 /* SelectedButton.m in Sources */,
 				6966A1BF20006EAD008176BA /* UIViewController+CWLateralSlide.m in Sources */,
 				69F7E7552015C4BD007CFE9E /* PrintTableViewController.m in Sources */,
 				69E625DB2011B2B400A23880 /* WBTabbar.m in Sources */,
 				69E625E52011B77F00A23880 /* MeViewController.m in Sources */,
+				69620419201753FE00402D0C /* PayRec.m in Sources */,
 				696203F62015E20600402D0C /* PrintDetail.m in Sources */,
 				696203F32015E00E00402D0C /* PrintJobCell.m in Sources */,
 				69F7E735201413BD007CFE9E /* LaunchViewController.m in Sources */,
+				699A06F92018577700DD4461 /* IFMMenu.m in Sources */,
+				699A07042018895D00DD4461 /* HQStepper.m in Sources */,
 				69F7E740201450F3007CFE9E /* UniHttpTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -742,6 +890,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6966A18920006440008176BA /* Base */,
+				6962041A20176A8900402D0C /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -753,6 +902,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -808,6 +958,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

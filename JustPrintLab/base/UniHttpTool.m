@@ -9,9 +9,11 @@
 #import "UniHttpTool.h"
 #import<CommonCrypto/CommonDigest.h>
 #import "Account.h"
+#import "CommonFunc.h"
+#import "MBProgressHUD+MJ.h"
 @interface UniHttpTool()
 
-
+@property(nonatomic,strong)MBProgressHUD*HUD;
 @end
 @implementation UniHttpTool
 
@@ -28,6 +30,7 @@
     AFHTTPSessionManager* manager=[AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes= [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",nil];
     NSString*afnURL=[NSString stringWithFormat:@"%@%@",url,[self getCommonParams]];
+    afnURL= [afnURL stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     [manager POST:afnURL parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         
       
@@ -36,6 +39,17 @@
             success(responseObject);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (error.code == -1009) {
+            [MBProgressHUD showText:@"网络已断开"];
+        }else if (error.code == -1005){
+            [MBProgressHUD showText:@"网络连接已中断"];
+        }else if(error.code == -1001){
+            [MBProgressHUD showText:@"请求超时"];
+        }else if (error.code == -1003){
+            [MBProgressHUD showText:@"未能找到使用指定主机名的服务器"];
+        }else{
+            [MBProgressHUD showText:@"小J出意外了"];
+        }
         if (failure) {
             failure(error);
         }
@@ -48,6 +62,7 @@
            failure:(void (^)(NSError *error))failure{
     AFHTTPSessionManager* manager=[AFHTTPSessionManager manager];
     NSString*afnURL=[NSString stringWithFormat:@"%@%@",url,[self getCommonParams]];
+    afnURL= [afnURL stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     [manager POST:afnURL parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         
         
@@ -56,6 +71,17 @@
             success(responseObject);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (error.code == -1009) {
+            [MBProgressHUD showText:@"网络已断开"];
+        }else if (error.code == -1005){
+            [MBProgressHUD showText:@"网络连接已中断"];
+        }else if(error.code == -1001){
+            [MBProgressHUD showText:@"请求超时"];
+        }else if (error.code == -1003){
+            [MBProgressHUD showText:@"未能找到使用指定主机名的服务器"];
+        }else{
+            [MBProgressHUD showText:@"小J出意外了"];
+        }
         if (failure) {
             failure(error);
         }
@@ -70,6 +96,7 @@
     manager.responseSerializer.acceptableContentTypes= [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",nil];
 
      NSString*afnURL=[NSString stringWithFormat:@"%@%@",url,[self getCommonParams]];
+     afnURL= [afnURL stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     [manager GET:afnURL parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         
         
@@ -78,6 +105,17 @@
             success(responseObject);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (error.code == -1009) {
+            [MBProgressHUD showText:@"网络已断开"];
+        }else if (error.code == -1005){
+            [MBProgressHUD showText:@"网络连接已中断"];
+        }else if(error.code == -1001){
+            [MBProgressHUD showText:@"请求超时"];
+        }else if (error.code == -1003){
+            [MBProgressHUD showText:@"未能找到使用指定主机名的服务器"];
+        }else{
+            [MBProgressHUD showText:@"小J出意外了"];
+        }
         if (failure) {
             failure(error);
         }
@@ -92,6 +130,7 @@
 
     AFHTTPSessionManager* manager=[AFHTTPSessionManager manager];
      NSString*afnURL=[NSString stringWithFormat:@"%@%@",url,[self getCommonParams]];
+     afnURL= [afnURL stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     [manager GET:afnURL parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         
         
@@ -100,6 +139,17 @@
             success(responseObject);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (error.code == -1009) {
+            [MBProgressHUD showText:@"网络已断开"];
+        }else if (error.code == -1005){
+            [MBProgressHUD showText:@"网络连接已中断"];
+        }else if(error.code == -1001){
+            [MBProgressHUD showText:@"请求超时"];
+        }else if (error.code == -1003){
+            [MBProgressHUD showText:@"未能找到使用指定主机名的服务器"];
+        }else{
+            [MBProgressHUD showText:@"小J出意外了"];
+        }
         if (failure) {
             failure(error);
         }
@@ -184,15 +234,15 @@ constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))FData
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (error.code == -1009) {
-           // [MBProgressHUD showError:@"网络已断开"];
+            [MBProgressHUD showError:@"网络已断开"];
         }else if (error.code == -1005){
-           // [MBProgressHUD showError:@"网络连接已中断"];
+            [MBProgressHUD showError:@"网络连接已中断"];
         }else if(error.code == -1001){
-           // [MBProgressHUD showError:@"请求超时"];
+            [MBProgressHUD showError:@"请求超时"];
         }else if (error.code == -1003){
-           // [MBProgressHUD showError:@"未能找到使用指定主机名的服务器"];
+            [MBProgressHUD showError:@"未能找到使用指定主机名的服务器"];
         }else{
-           // [MBProgressHUD showError:@"上传失败"];
+            [MBProgressHUD showError:@"上传失败"];
         }
         
         if (failure!=nil) {
@@ -208,18 +258,8 @@ constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))FData
  返回url的公共参数
  */
 +(NSString*)getCommonParams{
-    NSString* file=[DocumentFile stringByAppendingString:@"/accout.data"];
-    Account * acc=[NSKeyedUnarchiver unarchiveObjectWithFile:file];
-    NSString*uid=[[[UIDevice currentDevice] identifierForVendor] UUIDString];
-    NSString*version=@"101280001";
-    NSString*params=@"";
-    if (acc) {
-        params=[NSString stringWithFormat:@"&_from=app&token=%@&uid=%@&sta_sn=1&i_version=%@",acc.token,uid,version];
-    }else{
-        params=[NSString stringWithFormat:@"&_from=app&uid=%@&sta_sn=1&i_version=%@",uid,version];
-    }
-    
-    return params;
+
+    return [[[self alloc]init] getCommonParams];
 }
 -(NSString*)getCommonParams{
     NSString* file=[DocumentFile stringByAppendingString:@"/accout.data"];
@@ -288,5 +328,82 @@ constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))FData
     NSInteger subsidy=[acc.subsidy integerValue];
     return subsidy;
     
+}
+
+-(void)uploadWithparameters:(id)parameters
+                     name:(NSString *)name
+                 filename:(NSString*)filename
+               uploadData:(NSData*)data
+                 mineType:(NSString*)mineType
+                  success:(void (^)(id  json))success{
+    NSString* URL=[NSString stringWithFormat:@"%@/ajax/file.aspx?act=upload",RootURL];
+    AFHTTPSessionManager* manager=[AFHTTPSessionManager manager];
+    [manager POST:URL parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        
+        [self hudTipWillShow:YES];
+        [formData appendPartWithFileData:data name:name fileName:filename  mimeType:mineType];
+        
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        self.HUD.progress=uploadProgress.fractionCompleted;
+    
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [self hudTipWillShow:NO];
+        if (success) {
+            success(responseObject);
+            
+            
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [self hudTipWillShow:NO];
+        if (error.code == -1009) {
+            [MBProgressHUD showError:@"网络已断开"];
+        }else if (error.code == -1005){
+            [MBProgressHUD showError:@"网络连接已中断"];
+        }else if(error.code == -1001){
+            [MBProgressHUD showError:@"请求超时"];
+        }else if (error.code == -1003){
+            [MBProgressHUD showError:@"未能找到使用指定主机名的服务器"];
+        }else{
+            [MBProgressHUD showError:@"上传失败"];
+        }
+        
+    }];
+    
+}
++(void)uploadWithparameters:(id)parameters
+                     name:(NSString *)name
+                 filename:(NSString*)filename
+               uploadData:(NSData*)data
+                 mineType:(NSString*)mineType
+                  success:(void (^)(id  json))success{
+    [[[self alloc]init] uploadWithparameters:parameters name:name filename:filename uploadData:data mineType:mineType success:^(id json) {
+        if (success) {
+             success(json);
+        }
+       
+    }];
+}
+#pragma mark -- init MBProgressHUD
+-(void)hudTipWillShow:(BOOL)willShow{
+    if (willShow) {
+        [[CommonFunc getCurrentVC] resignFirstResponder];
+        UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+        if (!_HUD) {
+            _HUD = [MBProgressHUD showHUDAddedTo:keyWindow animated:YES];
+            _HUD.mode = MBProgressHUDModeDeterminate;
+            _HUD.progress = 0;
+            _HUD.labelText = @"上传中";
+            _HUD.removeFromSuperViewOnHide = YES;
+        }else{
+            _HUD.progress = 0;
+            _HUD.labelText = @"上传中";
+            [keyWindow addSubview:_HUD];
+            [_HUD show:YES];
+        }
+    }else{
+        [_HUD hide:YES];
+    }
 }
 @end

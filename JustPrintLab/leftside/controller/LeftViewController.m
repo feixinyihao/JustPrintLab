@@ -13,7 +13,7 @@
 #import "UniHttpTool.h"
 #import <UIImageView+WebCache.h>
 #import "CommonFunc.h"
-#import "MBProgressHUD+JP.h"
+#import "MBProgressHUD+MJ.h"
 @interface LeftViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,weak) UITableView *tableView;

@@ -86,14 +86,14 @@
         self.icon.image=[UIImage imageNamed:@"imageicon"];
     }
    
-    self.icon.frame=CGRectMake(5, 15, 50, 50);
-    self.nameLabel.frame=CGRectMake(60, 15, 280, 18);
-    self.dataLabel.frame=CGRectMake(60, 60, 150, 15);
-    self.sizeLabel.frame=CGRectMake(60, 30, 100, 30);
+    self.icon.frame=CGRectMake(15, 10, 60, 60);
+    self.nameLabel.frame=CGRectMake(90, 10, 280, 20);
+    self.dataLabel.frame=CGRectMake(90, 50, 150, 20);
+    self.sizeLabel.frame=CGRectMake(90, 30, 100, 20);
     self.sizeLabel.textColor=[UIColor orangeColor];
     self.sizeLabel.text=[NSString stringWithFormat:@"%.2fKB",[self.item.dwFileSize floatValue]/1000];
     self.sizeLabel.font=[UIFont systemFontOfSize:15];
-    self.nameLabel.font=[UIFont systemFontOfSize:14];
+    self.nameLabel.font=[UIFont systemFontOfSize:15];
     self.dataLabel.font=[UIFont systemFontOfSize:12];
     self.nameLabel.text=self.item.szDisplayName;
     NSString*dwSubmitTime=[NSString stringWithFormat:@"%@",self.item.dwSubmitTime];

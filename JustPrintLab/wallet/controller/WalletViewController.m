@@ -10,6 +10,9 @@
 #import "CustomButton.h"
 #import "UniHttpTool.h"
 #import "CommonFunc.h"
+#import "PayRecViewController.h"
+#import "RefoundViewController.h"
+#import "MBProgressHUD+MJ.h"
 @interface WalletViewController ()
 @property(nonatomic,weak)UILabel *balanceL;
 @property(nonatomic,weak)UILabel *subL;
@@ -73,7 +76,7 @@
             //余额
             UILabel*balanceL=[[UILabel alloc]initWithFrame:CGRectMake(90, 60, (ScreenWidth-90)/2, 15)];
             balanceL.text=[NSString stringWithFormat:@"%.2f元",[UniHttpTool getNativeBalance]/100.0];
-            balanceL.textColor=mainColor;
+            balanceL.textColor=JpColor(27, 161, 232);
             balanceL.textAlignment=NSTextAlignmentCenter;
             balanceL.font=[UIFont systemFontOfSize:12];
             self.balanceL=balanceL;
@@ -87,7 +90,7 @@
             
             UILabel*subL=[[UILabel alloc]initWithFrame:CGRectMake((ScreenWidth-90)/2+90, 60, (ScreenWidth-90)/2, 15)];
             subL.text=[NSString stringWithFormat:@"%.2f元",[UniHttpTool getNativeSubsidy]/100.0];
-            subL.textColor=mainColor;
+            subL.textColor=JpColor(27, 161, 232);
             subL.textAlignment=NSTextAlignmentCenter;
             subL.font=[UIFont systemFontOfSize:12];
             [cell.contentView addSubview:subL];
@@ -109,6 +112,7 @@
             
             CustomButton*refoundBtn=[[CustomButton alloc]initWithFrame:CGRectMake(ScreenWidth/2, 5, ScreenWidth/2, 60)];
             [refoundBtn setTitle:@"退款" forState:UIControlStateNormal];
+            [refoundBtn addTarget:self action:@selector(refound) forControlEvents:UIControlEventTouchUpInside];
             [refoundBtn setImageScale:0.8];
             [refoundBtn setImage:[UIImage imageNamed:@"refound"] forState:UIControlStateNormal];
             [cell.contentView addSubview:refoundBtn];
@@ -162,12 +166,24 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section==2) {
+        PayRecViewController*payrec=[[PayRecViewController alloc]init];
+        [self.navigationController pushViewController:payrec animated:YES];
+    }else if(indexPath.section==3){
+        RefoundViewController*refound=[[RefoundViewController alloc]init];
+        [self.navigationController pushViewController:refound animated:YES];
+    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+-(void)refound{
+    [CommonFunc alert:@"确认退款吗？" withMessage:nil:^(UIAlertAction *acton) {
+        [MBProgressHUD showText:@"退款成功"];
+    }];
+}
 
 
 @end

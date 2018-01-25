@@ -93,7 +93,7 @@
 -(void)setupView{
     
     self.typeImageView.frame=CGRectMake(5, 15, 50, 50);
-    self.szDocumentLabel.frame=CGRectMake(60, 15, ScreenWidth-60, 15);
+    self.szDocumentLabel.frame=CGRectMake(60, 15, ScreenWidth-120-60, 15);
     self.configure.frame=CGRectMake(88, 35, 140, 20);
     self.copies.frame=CGRectMake(60, 35, 35, 20);
     NSString*str;
@@ -159,14 +159,18 @@
 
     
     self.configure.font=[UIFont systemFontOfSize:12];
-    [self.dwRandomCodeLabel setFrame:CGRectMake(12, 2, 130, 15)];
+    [self.dwRandomCodeLabel setFrame:CGRectMake(ScreenWidth-140, 30, 120, 20)];
+    self.dwRandomCodeLabel.backgroundColor=JpColor(240, 240, 240);
+    self.dwRandomCodeLabel.layer.cornerRadius=10;
+    self.dwRandomCodeLabel.layer.masksToBounds=YES;
+    self.dwRandomCodeLabel.textAlignment=NSTextAlignmentCenter;
     self.dwSubmitDateLabel.frame=CGRectMake(60, 60, 150, 15);
     self.szDocumentLabel.font=[UIFont systemFontOfSize:14];
     self.dwSubmitDateLabel.font=[UIFont systemFontOfSize:11];
     self.dwRandomCodeLabel.font=[UIFont systemFontOfSize:12];
     self.szDocumentLabel.text=self.item.szDocument;
     UIImageView* takethings_backimage=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"takethings_backimage"]];
-    takethings_backimage.frame=CGRectMake([UIScreen mainScreen].bounds.size.width-130, 40, 130, 22);
+    takethings_backimage.frame=CGRectMake(ScreenWidth-140, 40, 130, 22);
     self.dwRandomCodeLabel.text=[NSString stringWithFormat:@"取件码:%@",self.item.dwRandomCode];
    
     NSString*dwSubmitTime=[NSString stringWithFormat:@"%@",self.item.dwSubmitTime];
@@ -177,11 +181,10 @@
     self.dwSubmitDateLabel.text=[NSString stringWithFormat:@"%@ %@",SubmitDate,dwSubmitTime];
 
     
-    [takethings_backimage addSubview:self.dwRandomCodeLabel];
+    [self.contentView addSubview:self.dwRandomCodeLabel];
     [self.contentView addSubview:self.typeImageView];
     [self.contentView addSubview:self.szDocumentLabel];
     [self.contentView addSubview:self.dwSubmitDateLabel];
-    [self.contentView addSubview:takethings_backimage];
     [self.contentView addSubview:self.configure];
     [self.contentView addSubview:self.copies];
 

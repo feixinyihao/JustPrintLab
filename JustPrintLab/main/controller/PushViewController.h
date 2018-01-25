@@ -6,8 +6,8 @@
 //  Copyright © 2018年 justprint. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseTableViewController.h"
 
-@interface PushViewController : UITableViewController
+@interface PushViewController :BaseTableViewController
 
 @end

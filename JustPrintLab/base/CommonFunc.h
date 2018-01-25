@@ -46,4 +46,10 @@
 +(UIViewController *)getCurrentVC;
 
 +(void)getBalance:(void (^)(id  json))success;
+
++(void)alert:(NSString*)title withMessage:(NSString*)message :(void (^)(UIAlertAction *acton))success;
++ (void)actionSheet:(NSString*)title1 withTitle2:(NSString*)title2;
++(NSString*)stringByTrim:(NSString*)str;
+
+
 @end

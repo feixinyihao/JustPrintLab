@@ -8,8 +8,9 @@
 
 #import "ProtocolViewController.h"
 #import <WebKit/WebKit.h>
-#import <MBProgressHUD.h>
+#import "MBProgressHUD.h"
 #import "UniHttpTool.h"
+#import "HomeTableViewController.h"
 @interface ProtocolViewController ()<WKNavigationDelegate>
 
 @end
@@ -25,7 +26,7 @@
     [closeBtn addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem*left=[[UIBarButtonItem alloc]initWithCustomView:closeBtn];
     self.navigationItem.leftBarButtonItem=left;
-    [self.navigationItem.leftBarButtonItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor], NSForegroundColorAttributeName,[UIFont systemFontOfSize:17],NSFontAttributeName,nil] forState:UIControlStateNormal];
+
     
     WKWebView*webview=[[WKWebView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
     webview.navigationDelegate=self;
@@ -37,7 +38,15 @@
     // Do any additional setup after loading the view.
 }
 -(void)close{
-    [self dismissViewControllerAnimated:YES completion:nil];
+     [self dismissViewControllerAnimated:YES completion:^{
+        if ([[[UIApplication sharedApplication] keyWindow].rootViewController isKindOfClass:[HomeTableViewController class]]) {
+            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+        }
+       
+    }];
+    
+   
+  
     
 }
 - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation{

@@ -15,7 +15,10 @@
 #define JpColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 
 
-#define mainColor JpColor(27, 161, 232)
+#define mainColor JpColor(84, 100, 122)
+
+#define kIs_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
 #define kAppId  [NSString stringWithFormat:@"1160633391"]
 //主目录
 #define DocumentFile [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject]

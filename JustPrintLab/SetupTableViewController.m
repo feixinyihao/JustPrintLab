@@ -12,6 +12,7 @@
 #import "ProtocolViewController.h"
 #import "BaseNavigationController.h"
 #import "CommonFunc.h"
+#import "MBProgressHUD+MJ.h"
 @interface SetupTableViewController ()<SKStoreProductViewControllerDelegate>
 
 @end
@@ -90,7 +91,9 @@
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     switch (indexPath.section) {
         case 2:
-            [self alert];
+            [CommonFunc alert:@"确定退出吗？" withMessage:nil :^(UIAlertAction *acton) {
+                [CommonFunc backToLogon];
+            }];
             break;
         case 0:{
             switch (indexPath.row) {
@@ -101,36 +104,30 @@
                     NSString*url=[NSString stringWithFormat:@"%@/lang/zh-Hans-CN/rech_protocol.html",RootURL];
                     ProtocolViewController *protocol=[[ProtocolViewController alloc]init];
                     protocol.navTitle=@"充值协议";
-                    BaseNavigationController*nav=[[BaseNavigationController alloc]initWithRootViewController:protocol];
+                    UINavigationController*nav=[[UINavigationController alloc]initWithRootViewController:protocol];
                     protocol.url=url;
-                    [self presentViewController:nav animated:YES completion:nil];
+                    [self presentViewController:nav animated:YES completion:^{
+                        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+                    }];
                 }break;
                     
                 default:
                     break;
             }
         }
+        case 1:
+            if (indexPath.row==0) {
+                [CommonFunc alert:@"是否清除缓存!" withMessage:nil:^(UIAlertAction *acton) {
+                    [MBProgressHUD showText:@"清除成功！"];
+                }];
+            }
+            break;
             
         default:
             break;
     }
 }
--(void)alert{
-    
-    NSString*logoutMessage=@"确定退出吗？";
-    UIAlertController *alertController=[UIAlertController alertControllerWithTitle:logoutMessage message:@"" preferredStyle:UIAlertControllerStyleAlert];//创建界面
-    NSString*signout=@"确定";
-    UIAlertAction *cancelAction=[UIAlertAction actionWithTitle:signout style:UIAlertActionStyleDefault handler:^(UIAlertAction *acton){
-        
-        [CommonFunc backToLogon];
-    }];
-    NSString*cancel=@"取消";
-    UIAlertAction *otherAction=[UIAlertAction actionWithTitle:cancel style:UIAlertActionStyleDefault handler:^(UIAlertAction *acton){}];
-    
-    [alertController addAction:cancelAction];
-    [alertController addAction:otherAction];
-    [self presentViewController: alertController animated:YES completion:nil];
-}
+
 
 - (void)loadAppStoreController{
 

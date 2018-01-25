@@ -15,6 +15,7 @@
     if ([super initWithFrame:frame]) {
         if (self) {
             self.backgroundColor=[UIColor whiteColor];
+            self.layer.cornerRadius=5;
             CGFloat scale=ScreenWidth/375;
             UIImageView*scanImage=[[UIImageView alloc]initWithFrame:CGRectMake(20*scale, 20*scale, (ScreenWidth-10)/4-40*scale, (ScreenWidth-10)/4-40*scale)];
             [scanImage setImage:[UIImage imageNamed:imageName]];

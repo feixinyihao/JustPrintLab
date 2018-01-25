@@ -11,7 +11,7 @@
 #import "ScanRecCell.h"
 #import "ScanRec.h"
 #import <MJRefresh.h>
-#import <MBProgressHUD.h>
+#import "MBProgressHUD.h"
 #import "CommonFunc.h"
 @interface ScanTableViewController ()
 
@@ -26,7 +26,7 @@
     [self setupData];
     self.tableView.mj_header=[MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self setupData];
-        [self.tableView.mj_header endRefreshing];
+        
     }];
 
 }
@@ -42,12 +42,11 @@
     DLog(@"%s",__func__);
 }
 -(void)setupData{
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+  
     NSString*url=[NSString stringWithFormat:@"%@/ajax/scan.aspx?act=get_scan_rec&start=&end=",RootURL];
     [UniHttpTool getWithUrl:url parameters:nil progress:^(NSProgress *progress) {
         
     } success:^(id json) {
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
         if (![json[@"data"] isKindOfClass:[NSNull class]]) {
             NSMutableArray*dataArr=[NSMutableArray array];
             for (NSDictionary*dataDic in json[@"data"]) {
@@ -59,10 +58,10 @@
         }else{
             [CommonFunc backToLogon];
         }
-       
+       [self.tableView.mj_header endRefreshing];
        
     } failure:^(NSError *error) {
-        
+        [self.tableView.mj_header endRefreshing];
     }];
     
 }
@@ -71,19 +70,19 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return 1;
+    return self.dataArr.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return self.dataArr.count;
+    return 1;
 }
 
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ScanRecCell*cell=[ScanRecCell initWithTableView:tableView];
-    cell.item=self.dataArr[indexPath.row];
+    cell.item=self.dataArr[indexPath.section];
     
     return cell;
 }
@@ -91,6 +90,14 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     return 80;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 10;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UIView *view=[[UIView alloc]init];
+    view.backgroundColor=JpColor(240, 240, 240);
+    return view;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
