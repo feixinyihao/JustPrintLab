@@ -12,6 +12,7 @@
 #import "MBProgressHUD+MJ.h"
 #import "CommonFunc.h"
 #import "SelectedButton.h"
+#import "UIView+cxr.h"
 @interface PrintConfigViewController ()<UITableViewDelegate,UITableViewDataSource,SelectedButtonDelegate>
 @property(nonatomic,weak)UITableView*tableView;
 @property(nonatomic,assign)NSInteger copies;
@@ -143,25 +144,26 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 60;
 }
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     switch (indexPath.row) {
         case 1:{
    
             SelectedButton*selectBtn=[SelectedButton selectedButtonWithTitle1:@"单面" title2:@"双面" selected:![self.dbl isEqualToString:@"双面"] withTag:1100];
             selectBtn.delegate=self;
-            [self.navigationController.view addSubview:selectBtn];
+            [self.navigationController.view addSubviewWithAnimation:selectBtn];
         }
             break;
         case 2:{
             SelectedButton*selectBtn=[SelectedButton selectedButtonWithTitle1:@"黑白" title2:@"彩色" selected:![self.color isEqualToString:@"彩色"] withTag:1200];
             selectBtn.delegate=self;
-            [self.navigationController.view addSubview:selectBtn];
+            [self.navigationController.view addSubviewWithAnimation:selectBtn];
             
         }break;
         case 3:{
             SelectedButton*selectBtn=[SelectedButton selectedButtonWithTitle1:@"A4" title2:@"A3" selected:![self.paper isEqualToString:@"A3"] withTag:1300];
             selectBtn.delegate=self;
-            [self.navigationController.view addSubview:selectBtn];
+            [self.navigationController.view addSubviewWithAnimation:selectBtn];
         }break;
         default:
             break;

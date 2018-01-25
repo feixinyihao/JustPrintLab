@@ -13,6 +13,7 @@
 #import "BaseNavigationController.h"
 #import "CommonFunc.h"
 #import "MBProgressHUD+MJ.h"
+#import <YYWebImage/YYWebImage.h>
 @interface SetupTableViewController ()<SKStoreProductViewControllerDelegate>
 
 @end
@@ -117,7 +118,8 @@
         }
         case 1:
             if (indexPath.row==0) {
-                [CommonFunc alert:@"是否清除缓存!" withMessage:nil:^(UIAlertAction *acton) {
+                [CommonFunc alert:@"是否清除缓存?" withMessage:nil:^(UIAlertAction *acton) {
+                    [self clearCache];
                     [MBProgressHUD showText:@"清除成功！"];
                 }];
             }
@@ -153,4 +155,8 @@
     
 }
 
+- (void)clearCache {
+    [[YYWebImageManager sharedManager].cache.diskCache removeAllObjects];
+    [[YYWebImageManager sharedManager].cache.memoryCache removeAllObjects];
+}
 @end

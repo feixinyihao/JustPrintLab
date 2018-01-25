@@ -28,13 +28,12 @@
     [super viewDidLoad];
     self.title=@"退款记录";
     self.tableView.tableFooterView=[[UIView alloc]init];
-    [self setupRefoundRec];
     
     self.tableView.mj_header=[MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self setupRefoundRec];
        
     }];
-    
+    [self.tableView.mj_header beginRefreshing];
 }
 
 

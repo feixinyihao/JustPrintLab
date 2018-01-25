@@ -22,13 +22,12 @@
 
     self.title=@"充值记录";
     self.tableView.tableFooterView=[[UIView alloc]init];
-    [self setupPayRec];
     
     self.tableView.mj_header=[MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self setupPayRec];
       
     }];
-    
+    [self.tableView.mj_header beginRefreshing];
 }
 
 

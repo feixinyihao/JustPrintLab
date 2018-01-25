@@ -50,6 +50,7 @@
 		69AB86B5201295580060C19F /* HomeMidView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AB86B4201295580060C19F /* HomeMidView.m */; };
 		69AB86C42012E5270060C19F /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AB86C32012E5270060C19F /* BaseNavigationController.m */; };
 		69AB86C72013317E0060C19F /* WalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AB86C62013317E0060C19F /* WalletViewController.m */; };
+		69E115F7201A93E3005E56CB /* UIView+cxr.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E115F6201A93E3005E56CB /* UIView+cxr.m */; };
 		69E625D62011B27900A23880 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E625D42011B27900A23880 /* HomeTableViewController.m */; };
 		69E625DB2011B2B400A23880 /* WBTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E625D92011B2B400A23880 /* WBTabbar.m */; };
 		69E625DC2011B2B400A23880 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E625DA2011B2B400A23880 /* CustomButton.m */; };
@@ -176,6 +177,8 @@
 		69AB86C32012E5270060C19F /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		69AB86C52013317E0060C19F /* WalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalletViewController.h; sourceTree = "<group>"; };
 		69AB86C62013317E0060C19F /* WalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalletViewController.m; sourceTree = "<group>"; };
+		69E115F5201A93E3005E56CB /* UIView+cxr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+cxr.h"; sourceTree = "<group>"; };
+		69E115F6201A93E3005E56CB /* UIView+cxr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+cxr.m"; sourceTree = "<group>"; };
 		69E625C4200C6F2F00A23880 /* JustPrintLab.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JustPrintLab.pch; sourceTree = "<group>"; };
 		69E625D42011B27900A23880 /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
 		69E625D52011B27900A23880 /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
@@ -268,13 +271,13 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		69620416201753F300402D0C /* New Group */ = {
+		69620416201753F300402D0C /* model */ = {
 			isa = PBXGroup;
 			children = (
 				69620417201753FD00402D0C /* PayRec.h */,
 				69620418201753FE00402D0C /* PayRec.m */,
 			);
-			path = "New Group";
+			path = model;
 			sourceTree = "<group>";
 		};
 		6966A17120006440008176BA = {
@@ -453,7 +456,7 @@
 		69AB86BA2012AA9C0060C19F /* wallet */ = {
 			isa = PBXGroup;
 			children = (
-				69620416201753F300402D0C /* New Group */,
+				69620416201753F300402D0C /* model */,
 				696204122017531200402D0C /* view */,
 				69AB86BB2012AAA70060C19F /* controller */,
 			);
@@ -541,6 +544,8 @@
 				69F7E74820145F76007CFE9E /* CommonFunc.m */,
 				69F7E73E201450F3007CFE9E /* UniHttpTool.h */,
 				69F7E73F201450F3007CFE9E /* UniHttpTool.m */,
+				69E115F5201A93E3005E56CB /* UIView+cxr.h */,
+				69E115F6201A93E3005E56CB /* UIView+cxr.m */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -802,6 +807,7 @@
 				6966A1C220006EAD008176BA /* CWLateralSlideConfiguration.m in Sources */,
 				696203F02015E00600402D0C /* PrintJob.m in Sources */,
 				699A06F62018577700DD4461 /* IFMMenuView.m in Sources */,
+				69E115F7201A93E3005E56CB /* UIView+cxr.m in Sources */,
 				696203EA2015D74900402D0C /* ScanRec.m in Sources */,
 				699A07052018895D00DD4461 /* UIColor+HQStepper.m in Sources */,
 				6966A1C82000871C008176BA /* LeftViewController.m in Sources */,

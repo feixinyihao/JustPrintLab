@@ -7,7 +7,7 @@
 //
 
 #import "SelectedButton.h"
-
+#import "UIView+cxr.h"
 
 @implementation SelectedButton
 
@@ -64,12 +64,12 @@
 }
 
 -(void)cancel{
-    [self removeFromSuperview];
+    [self removeFromSuperviewWithAnimation];
 }
 
 -(void)SelectedButtonClick:(UIButton*)btn{
     if ([self.delegate respondsToSelector:@selector(SelectedButtonClick:)]) {
-        [self removeFromSuperview];
+        [self removeFromSuperviewWithAnimation];
         [self.delegate SelectedButtonClick:btn];
     }
 }

@@ -21,12 +21,16 @@
 #import "PrintMemu.h"
 #import "IFMMenuItem.h"
 #import "CommonFunc.h"
-@interface PrintTableViewController ()<UITableViewDataSource,UITableViewDelegate,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate,PrintUploadViewDelegate,TZImagePickerControllerDelegate,PrintMemuDelegate>
+#import <ESPictureBrowser.h>
+@interface PrintTableViewController ()<UITableViewDataSource,UITableViewDelegate,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate,PrintUploadViewDelegate,TZImagePickerControllerDelegate,PrintMemuDelegate,ESPictureBrowserDelegate>
 @property(nonatomic,strong)NSMutableArray*dataArr;
 @property(nonatomic,strong)UITableView*tableView;
 
 @property(nonatomic,weak)UIButton*scanBtn;
 
+@property(nonatomic,strong)NSArray*urlArr;
+
+@property(nonatomic,strong)UITableViewCell*tempCell;
 @end
 
 @implementation PrintTableViewController
@@ -36,7 +40,7 @@
     self.view.backgroundColor=[UIColor whiteColor];
     self.title=@"打印任务";
     [self setupTableView];
-    [self setupData];
+  
    
     
     self.tableView.mj_header=[MJRefreshNormalHeader headerWithRefreshingBlock:^{
@@ -44,6 +48,7 @@
        
     }];
     
+    [self.tableView.mj_header beginRefreshing];
     //通知中心是个单例
     NSNotificationCenter *notiCenter = [NSNotificationCenter defaultCenter];
     // 注册一个监听事件。第三个参数的事件名， 系统用这个参数来区别不同事件。
@@ -143,10 +148,16 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 80;
 }
+/*
+ 点击预览
+ */
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
      PrintJob* printjob=self.dataArr[indexPath.section];
-    DLog(@"%@---%@",printjob.szJobFileName,printjob.dwJobId);
+    MBProgressHUD*hud=[[MBProgressHUD alloc]init];
+    hud.labelText=@"预览准备中...";
+    [hud show:YES];
+    [self.view addSubview:hud];
     NSString*url=[NSString stringWithFormat:@"%@/ajax/print.aspx?file=%@&task_id=%@&page_num=1&act=prepare_print_view",RootURL, printjob.szJobFileName,printjob.dwJobId];
     [UniHttpTool getWithUrl:url parameters:nil progress:^(NSProgress *progress) {
         
@@ -158,12 +169,26 @@
                 
             } success:^(id json) {
                 DLog(@"二:%@",json);
+                [MBProgressHUD hideHUDForView:self.view];
+                NSDictionary*dataDic=json[@"data"];
+                NSInteger imageCount=[dataDic[@"total"] integerValue];;
+                NSMutableArray*tempArr=[NSMutableArray array];
+                for (int i=0; i<imageCount ; i++) {
+                    [tempArr addObject:[NSString stringWithFormat:@"%@%@b_%d.png",RootURL,dataDic[@"dir"],i+1]];
+                }
+                self.urlArr=tempArr;
+                self.tempCell=[tableView cellForRowAtIndexPath:indexPath];
+                ESPictureBrowser*pictureBrowser=[[ESPictureBrowser alloc]init];
+                pictureBrowser.pageTextCenter=CGPointMake(ScreenWidth/2, 30);
+                pictureBrowser.pageTextFont=[UIFont fontWithName:@"Arial-BoldMT" size:16];
+                pictureBrowser.delegate=self;
+                [pictureBrowser showFromView:self.tempCell picturesCount:imageCount currentPictureIndex:0];
             } failure:^(NSError *error) {
-                
+                [MBProgressHUD hideHUDForView:self.view];
             }];
         }
     } failure:^(NSError *error) {
-        
+          [MBProgressHUD hideHUDForView:self.view];
     }];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
@@ -210,7 +235,12 @@
     }
     return _dataArr;
 }
-
+-(UITableViewCell *)tempCell{
+    if (_tempCell==nil) {
+        _tempCell=[[UITableViewCell alloc]init];
+    }
+    return _tempCell;
+}
 #pragma mark DZNEmptyDataSetSource
 /**
  空白也显示提示图片
@@ -322,5 +352,69 @@
         }
     }
     
+}
+
+-(NSArray *)urlArr{
+    if (_urlArr==nil) {
+        _urlArr=[NSArray array];
+    }
+    return _urlArr;
+}
+#pragma mark - ESPictureBrowserDelegate
+
+
+/**
+ 获取对应索引的视图
+ 
+ @param pictureBrowser 图片浏览器
+ @param index          索引
+ 
+ @return 视图
+ */
+- (UIView *)pictureView:(ESPictureBrowser *)pictureBrowser viewForIndex:(NSInteger)index {
+    return self.tempCell;
+}
+
+/**
+ 获取对应索引的图片大小
+ 
+ @param pictureBrowser 图片浏览器
+ @param index          索引
+ 
+ @return 图片大小
+ */
+- (CGSize)pictureView:(ESPictureBrowser *)pictureBrowser imageSizeForIndex:(NSInteger)index {
+    
+    return CGSizeMake(ScreenWidth, ScreenWidth*723/1024);
+}
+
+/**
+ 获取对应索引默认图片，可以是占位图片，可以是缩略图
+ 
+ @param pictureBrowser 图片浏览器
+ @param index          索引
+ 
+ @return 图片
+ */
+- (UIImage *)pictureView:(ESPictureBrowser *)pictureBrowser defaultImageForIndex:(NSInteger)index {
+
+    return [UIImage imageNamed:@"plachholder"];
+}
+
+/**
+ 获取对应索引的高质量图片地址字符串
+ 
+ @param pictureBrowser 图片浏览器
+ @param index          索引
+ 
+ @return 图片的 url 字符串
+ */
+- (NSString *)pictureView:(ESPictureBrowser *)pictureBrowser highQualityUrlStringForIndex:(NSInteger)index {
+    
+    return self.urlArr[index];
+}
+
+- (void)pictureView:(ESPictureBrowser *)pictureBrowser scrollToIndex:(NSInteger)index {
+    NSLog(@"%ld", index);
 }
 @end
