@@ -41,6 +41,7 @@
     self.title=@"打印配置";
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName, nil]];
     UIButton*closeBtn=[[UIButton alloc]init];
+    closeBtn.frame=CGRectMake(0, 0, 30, 30);
     [closeBtn setImage:[UIImage imageNamed:@"close_light"] forState:UIControlStateNormal];
     [closeBtn addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem*left=[[UIBarButtonItem alloc]initWithCustomView:closeBtn];

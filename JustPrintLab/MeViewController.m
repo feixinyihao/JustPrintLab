@@ -9,6 +9,7 @@
 #import "MeViewController.h"
 #import "SetupTableViewController.h"
 #import "UniHttpTool.h"
+#import "CommonFunc.h"
 @interface MeViewController ()
 
 @end
@@ -19,9 +20,7 @@
     [super viewDidLoad];
     self.view.backgroundColor=JpColor(240, 240, 240);
     self.tableView.tableFooterView = [UIView new];
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"printer_dft"] forBarMetrics:UIBarMetricsDefault];
-    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName, nil]];
-    self.navigationController.navigationBar.tintColor=[UIColor whiteColor];
+  
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -129,6 +128,17 @@
     if (indexPath.section==3) {
         SetupTableViewController*setup=[[SetupTableViewController alloc]init];
         [self.navigationController pushViewController:setup animated:YES];
+    }else if (indexPath.section==2){
+        switch (indexPath.row) {
+            case 2:
+       
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:400-905-7333"]];
+           
+                break;
+                
+            default:
+                break;
+        }
     }
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{

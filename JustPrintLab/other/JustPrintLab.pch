@@ -16,26 +16,31 @@
 
 
 #define mainColor JpColor(84, 100, 122)
-
+#define jpBlue   JpColor(27, 161, 232)
 #define kIs_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define kIs_iphone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
 
 #define kAppId  [NSString stringWithFormat:@"1160633391"]
 //主目录
 #define DocumentFile [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject]
 
 #define UID [[[UIDevice currentDevice] identifierForVendor] UUIDString];
-
+//高德Key
+#define AMapKey [NSString stringWithFormat:@"bb29550e34ecc8e8ef51ef212833a88e"]
 //app版本号
 #define currentVersion  [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"]
 
 #ifdef DEBUG    //调试阶段
 
 #define DLog(...) NSLog(__VA_ARGS__)
-
+#define KURL [NSString stringWithFormat:@"wmake.com.cn"]
 #define RootURL   [NSString stringWithFormat:@"http://wmake.com.cn"]
+
 #else   //发布
 
 #define DLog(...)
+#define KURL [NSString stringWithFormat:@"justprint.com.cn"]
 #define RootURL   [NSString stringWithFormat:@"https://justprint.com.cn"]
 
 #endif

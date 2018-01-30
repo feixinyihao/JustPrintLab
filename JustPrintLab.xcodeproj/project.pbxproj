@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		692D4E60201D9943006B88DF /* AnimatedAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 692D4E5E201D9943006B88DF /* AnimatedAnnotation.m */; };
+		692D4E63201D9969006B88DF /* AnimatedAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 692D4E62201D9969006B88DF /* AnimatedAnnotationView.m */; };
+		6958560A201DB45500F86273 /* CustomMAPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 69585609201DB45500F86273 /* CustomMAPointAnnotation.m */; };
+		6958560D201DB65000F86273 /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6958560B201DB64F00F86273 /* CustomAnnotationView.m */; };
+		69585610201DB68300F86273 /* TradingHour.m in Sources */ = {isa = PBXBuildFile; fileRef = 6958560F201DB68300F86273 /* TradingHour.m */; };
+		69585613201DB70200F86273 /* CustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69585611201DB70100F86273 /* CustomCalloutView.m */; };
+		69585616201EC34F00F86273 /* PrinterInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69585615201EC34F00F86273 /* PrinterInfoView.m */; };
+		69585619201F043D00F86273 /* PrinterInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69585618201F043D00F86273 /* PrinterInfoViewController.m */; };
+		695856402020090800F86273 /* CorePullScaleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6958563D2020090700F86273 /* CorePullScaleImageView.m */; };
+		695856412020090800F86273 /* UIScrollView+PullScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 6958563F2020090800F86273 /* UIScrollView+PullScale.m */; };
+		695856452020317B00F86273 /* WithImageLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 695856442020317B00F86273 /* WithImageLabel.m */; };
 		696203EA2015D74900402D0C /* ScanRec.m in Sources */ = {isa = PBXBuildFile; fileRef = 696203E82015D74900402D0C /* ScanRec.m */; };
 		696203ED2015D75100402D0C /* ScanRecCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 696203EC2015D75100402D0C /* ScanRecCell.m */; };
 		696203F02015E00600402D0C /* PrintJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 696203EE2015E00500402D0C /* PrintJob.m */; };
@@ -51,11 +62,19 @@
 		69AB86C42012E5270060C19F /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AB86C32012E5270060C19F /* BaseNavigationController.m */; };
 		69AB86C72013317E0060C19F /* WalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AB86C62013317E0060C19F /* WalletViewController.m */; };
 		69E115F7201A93E3005E56CB /* UIView+cxr.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E115F6201A93E3005E56CB /* UIView+cxr.m */; };
+		69E115FA201AD55D005E56CB /* QRcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E115F9201AD55D005E56CB /* QRcodeViewController.m */; };
+		69E115FD201AD5B0005E56CB /* CoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E115FC201AD5AF005E56CB /* CoverView.m */; };
+		69E11600201AFDDC005E56CB /* CertificationSccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E115FF201AFDDC005E56CB /* CertificationSccessViewController.m */; };
+		69E1160C201C08EB005E56CB /* FeeStdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E1160B201C08EB005E56CB /* FeeStdView.m */; };
+		69E11615201C1A2A005E56CB /* Feedetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E11613201C1A29005E56CB /* Feedetail.m */; };
+		69E1161C201D6A9F005E56CB /* JpDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E1161B201D6A9E005E56CB /* JpDevice.m */; };
+		69E1161F201D6B13005E56CB /* MFPFullInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E1161D201D6B13005E56CB /* MFPFullInfo.m */; };
 		69E625D62011B27900A23880 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E625D42011B27900A23880 /* HomeTableViewController.m */; };
 		69E625DB2011B2B400A23880 /* WBTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E625D92011B2B400A23880 /* WBTabbar.m */; };
 		69E625DC2011B2B400A23880 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E625DA2011B2B400A23880 /* CustomButton.m */; };
 		69E625DF2011B75300A23880 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E625DE2011B75300A23880 /* MapViewController.m */; };
 		69E625E52011B77F00A23880 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E625E42011B77F00A23880 /* MeViewController.m */; };
+		69F03FFF20204416008E2292 /* FeeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F03FFE20204416008E2292 /* FeeView.m */; };
 		69F7E73220136261007CFE9E /* SetupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F7E73120136261007CFE9E /* SetupTableViewController.m */; };
 		69F7E735201413BD007CFE9E /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F7E733201413BC007CFE9E /* LaunchViewController.m */; };
 		69F7E73920141411007CFE9E /* DrawCircleProgressButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F7E73820141411007CFE9E /* DrawCircleProgressButton.m */; };
@@ -90,6 +109,28 @@
 /* Begin PBXFileReference section */
 		0221512E296E3850139E1147 /* libPods-JustPrintLab.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JustPrintLab.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A8ED010C8FF066056659580 /* Pods-JustPrintLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustPrintLab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JustPrintLab/Pods-JustPrintLab.debug.xcconfig"; sourceTree = "<group>"; };
+		692D4E5E201D9943006B88DF /* AnimatedAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedAnnotation.m; sourceTree = "<group>"; };
+		692D4E5F201D9943006B88DF /* AnimatedAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedAnnotation.h; sourceTree = "<group>"; };
+		692D4E61201D9969006B88DF /* AnimatedAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedAnnotationView.h; sourceTree = "<group>"; };
+		692D4E62201D9969006B88DF /* AnimatedAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedAnnotationView.m; sourceTree = "<group>"; };
+		69585608201DB45400F86273 /* CustomMAPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMAPointAnnotation.h; sourceTree = "<group>"; };
+		69585609201DB45500F86273 /* CustomMAPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMAPointAnnotation.m; sourceTree = "<group>"; };
+		6958560B201DB64F00F86273 /* CustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationView.m; sourceTree = "<group>"; };
+		6958560C201DB65000F86273 /* CustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotationView.h; sourceTree = "<group>"; };
+		6958560E201DB68200F86273 /* TradingHour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradingHour.h; sourceTree = "<group>"; };
+		6958560F201DB68300F86273 /* TradingHour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradingHour.m; sourceTree = "<group>"; };
+		69585611201DB70100F86273 /* CustomCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCalloutView.m; sourceTree = "<group>"; };
+		69585612201DB70100F86273 /* CustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCalloutView.h; sourceTree = "<group>"; };
+		69585614201EC34F00F86273 /* PrinterInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrinterInfoView.h; sourceTree = "<group>"; };
+		69585615201EC34F00F86273 /* PrinterInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrinterInfoView.m; sourceTree = "<group>"; };
+		69585617201F043D00F86273 /* PrinterInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrinterInfoViewController.h; sourceTree = "<group>"; };
+		69585618201F043D00F86273 /* PrinterInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrinterInfoViewController.m; sourceTree = "<group>"; };
+		6958563C2020090700F86273 /* UIScrollView+PullScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+PullScale.h"; sourceTree = "<group>"; };
+		6958563D2020090700F86273 /* CorePullScaleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorePullScaleImageView.m; sourceTree = "<group>"; };
+		6958563E2020090800F86273 /* CorePullScaleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorePullScaleImageView.h; sourceTree = "<group>"; };
+		6958563F2020090800F86273 /* UIScrollView+PullScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+PullScale.m"; sourceTree = "<group>"; };
+		695856432020317B00F86273 /* WithImageLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WithImageLabel.h; sourceTree = "<group>"; };
+		695856442020317B00F86273 /* WithImageLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WithImageLabel.m; sourceTree = "<group>"; };
 		696203E82015D74900402D0C /* ScanRec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanRec.m; sourceTree = "<group>"; };
 		696203E92015D74900402D0C /* ScanRec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanRec.h; sourceTree = "<group>"; };
 		696203EB2015D75000402D0C /* ScanRecCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanRecCell.h; sourceTree = "<group>"; };
@@ -179,6 +220,20 @@
 		69AB86C62013317E0060C19F /* WalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalletViewController.m; sourceTree = "<group>"; };
 		69E115F5201A93E3005E56CB /* UIView+cxr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+cxr.h"; sourceTree = "<group>"; };
 		69E115F6201A93E3005E56CB /* UIView+cxr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+cxr.m"; sourceTree = "<group>"; };
+		69E115F8201AD55C005E56CB /* QRcodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRcodeViewController.h; sourceTree = "<group>"; };
+		69E115F9201AD55D005E56CB /* QRcodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRcodeViewController.m; sourceTree = "<group>"; };
+		69E115FB201AD5AF005E56CB /* CoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverView.h; sourceTree = "<group>"; };
+		69E115FC201AD5AF005E56CB /* CoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverView.m; sourceTree = "<group>"; };
+		69E115FE201AFDDC005E56CB /* CertificationSccessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CertificationSccessViewController.h; sourceTree = "<group>"; };
+		69E115FF201AFDDC005E56CB /* CertificationSccessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CertificationSccessViewController.m; sourceTree = "<group>"; };
+		69E1160A201C08EB005E56CB /* FeeStdView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeeStdView.h; sourceTree = "<group>"; };
+		69E1160B201C08EB005E56CB /* FeeStdView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeeStdView.m; sourceTree = "<group>"; };
+		69E11613201C1A29005E56CB /* Feedetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feedetail.m; sourceTree = "<group>"; };
+		69E11614201C1A29005E56CB /* Feedetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feedetail.h; sourceTree = "<group>"; };
+		69E1161A201D6A9E005E56CB /* JpDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JpDevice.h; sourceTree = "<group>"; };
+		69E1161B201D6A9E005E56CB /* JpDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JpDevice.m; sourceTree = "<group>"; };
+		69E1161D201D6B13005E56CB /* MFPFullInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFPFullInfo.m; sourceTree = "<group>"; };
+		69E1161E201D6B13005E56CB /* MFPFullInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFPFullInfo.h; sourceTree = "<group>"; };
 		69E625C4200C6F2F00A23880 /* JustPrintLab.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JustPrintLab.pch; sourceTree = "<group>"; };
 		69E625D42011B27900A23880 /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
 		69E625D52011B27900A23880 /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
@@ -190,6 +245,8 @@
 		69E625DE2011B75300A23880 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		69E625E32011B77F00A23880 /* MeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
 		69E625E42011B77F00A23880 /* MeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
+		69F03FFD20204416008E2292 /* FeeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeeView.h; sourceTree = "<group>"; };
+		69F03FFE20204416008E2292 /* FeeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeeView.m; sourceTree = "<group>"; };
 		69F7E73020136261007CFE9E /* SetupTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetupTableViewController.h; sourceTree = "<group>"; };
 		69F7E73120136261007CFE9E /* SetupTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetupTableViewController.m; sourceTree = "<group>"; };
 		69F7E733201413BC007CFE9E /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
@@ -248,6 +305,17 @@
 				DAC8E3295285F2938969636C /* Pods-JustPrintLab.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		6958564220200CBB00F86273 /* UIScrollView+PullScale */ = {
+			isa = PBXGroup;
+			children = (
+				6958563E2020090800F86273 /* CorePullScaleImageView.h */,
+				6958563D2020090700F86273 /* CorePullScaleImageView.m */,
+				6958563C2020090700F86273 /* UIScrollView+PullScale.h */,
+				6958563F2020090800F86273 /* UIScrollView+PullScale.m */,
+			);
+			path = "UIScrollView+PullScale";
 			sourceTree = "<group>";
 		};
 		6962040320173D2F00402D0C /* MBProgressHUD */ = {
@@ -363,6 +431,7 @@
 		6966A1B220006EA4008176BA /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				6958564220200CBB00F86273 /* UIScrollView+PullScale */,
 				699A06FD2018895C00DD4461 /* HQStepper */,
 				699A06ED2018577700DD4461 /* IFMMenu */,
 				6962040320173D2F00402D0C /* MBProgressHUD */,
@@ -420,6 +489,8 @@
 		69AB86B62012AA3F0060C19F /* map */ = {
 			isa = PBXGroup;
 			children = (
+				69E11620201D6B2D005E56CB /* view */,
+				69E11619201D6A8E005E56CB /* model */,
 				69AB86B72012AA500060C19F /* controller */,
 			);
 			path = map;
@@ -430,6 +501,8 @@
 			children = (
 				69E625DD2011B75300A23880 /* MapViewController.h */,
 				69E625DE2011B75300A23880 /* MapViewController.m */,
+				69585617201F043D00F86273 /* PrinterInfoViewController.h */,
+				69585618201F043D00F86273 /* PrinterInfoViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -479,6 +552,8 @@
 		69AB86BC2012AAC60060C19F /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				69E115F8201AD55C005E56CB /* QRcodeViewController.h */,
+				69E115F9201AD55D005E56CB /* QRcodeViewController.m */,
 				6966A18020006440008176BA /* ViewController.h */,
 				6966A18120006440008176BA /* ViewController.m */,
 				6966A1CB20008A7E008176BA /* PushViewController.h */,
@@ -493,6 +568,8 @@
 				69F7E7542015C4BD007CFE9E /* PrintTableViewController.m */,
 				6962041B201814B100402D0C /* PrintConfigViewController.h */,
 				6962041C201814B100402D0C /* PrintConfigViewController.m */,
+				69E115FE201AFDDC005E56CB /* CertificationSccessViewController.h */,
+				69E115FF201AFDDC005E56CB /* CertificationSccessViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -550,9 +627,47 @@
 			path = base;
 			sourceTree = "<group>";
 		};
+		69E11619201D6A8E005E56CB /* model */ = {
+			isa = PBXGroup;
+			children = (
+				6958560E201DB68200F86273 /* TradingHour.h */,
+				6958560F201DB68300F86273 /* TradingHour.m */,
+				69585608201DB45400F86273 /* CustomMAPointAnnotation.h */,
+				69585609201DB45500F86273 /* CustomMAPointAnnotation.m */,
+				692D4E5F201D9943006B88DF /* AnimatedAnnotation.h */,
+				692D4E5E201D9943006B88DF /* AnimatedAnnotation.m */,
+				69E1161E201D6B13005E56CB /* MFPFullInfo.h */,
+				69E1161D201D6B13005E56CB /* MFPFullInfo.m */,
+				69E1161A201D6A9E005E56CB /* JpDevice.h */,
+				69E1161B201D6A9E005E56CB /* JpDevice.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		69E11620201D6B2D005E56CB /* view */ = {
+			isa = PBXGroup;
+			children = (
+				692D4E61201D9969006B88DF /* AnimatedAnnotationView.h */,
+				692D4E62201D9969006B88DF /* AnimatedAnnotationView.m */,
+				6958560C201DB65000F86273 /* CustomAnnotationView.h */,
+				6958560B201DB64F00F86273 /* CustomAnnotationView.m */,
+				69585612201DB70100F86273 /* CustomCalloutView.h */,
+				69585611201DB70100F86273 /* CustomCalloutView.m */,
+				69585614201EC34F00F86273 /* PrinterInfoView.h */,
+				69585615201EC34F00F86273 /* PrinterInfoView.m */,
+				695856432020317B00F86273 /* WithImageLabel.h */,
+				695856442020317B00F86273 /* WithImageLabel.m */,
+				69F03FFD20204416008E2292 /* FeeView.h */,
+				69F03FFE20204416008E2292 /* FeeView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		69E625C5200C93C400A23880 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				69E115FB201AD5AF005E56CB /* CoverView.h */,
+				69E115FC201AD5AF005E56CB /* CoverView.m */,
 				699A070A20194F3300DD4461 /* SelectedButton.h */,
 				699A070B20194F3300DD4461 /* SelectedButton.m */,
 				696204002016D67500402D0C /* UploadButton.h */,
@@ -575,6 +690,8 @@
 				696203FE2016CA6200402D0C /* PrintUploadView.m */,
 				699A06FA2018585800DD4461 /* PrintMemu.h */,
 				699A06FB2018585800DD4461 /* PrintMemu.m */,
+				69E1160A201C08EB005E56CB /* FeeStdView.h */,
+				69E1160B201C08EB005E56CB /* FeeStdView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -599,6 +716,8 @@
 				69F7E73C20143B6D007CFE9E /* Account.m */,
 				696203EF2015E00500402D0C /* PrintJob.h */,
 				696203EE2015E00500402D0C /* PrintJob.m */,
+				69E11614201C1A29005E56CB /* Feedetail.h */,
+				69E11613201C1A29005E56CB /* Feedetail.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -765,6 +884,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-JustPrintLab/Pods-JustPrintLab-resources.sh",
+				"${PODS_ROOT}/AMap2DMap/MAMapKit.framework/AMap.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
 			);
@@ -805,12 +925,18 @@
 				69F7E73220136261007CFE9E /* SetupTableViewController.m in Sources */,
 				69AB86C72013317E0060C19F /* WalletViewController.m in Sources */,
 				6966A1C220006EAD008176BA /* CWLateralSlideConfiguration.m in Sources */,
+				69E1160C201C08EB005E56CB /* FeeStdView.m in Sources */,
+				695856452020317B00F86273 /* WithImageLabel.m in Sources */,
 				696203F02015E00600402D0C /* PrintJob.m in Sources */,
+				69E11615201C1A2A005E56CB /* Feedetail.m in Sources */,
 				699A06F62018577700DD4461 /* IFMMenuView.m in Sources */,
 				69E115F7201A93E3005E56CB /* UIView+cxr.m in Sources */,
+				69585613201DB70200F86273 /* CustomCalloutView.m in Sources */,
 				696203EA2015D74900402D0C /* ScanRec.m in Sources */,
+				69E1161F201D6B13005E56CB /* MFPFullInfo.m in Sources */,
 				699A07052018895D00DD4461 /* UIColor+HQStepper.m in Sources */,
 				6966A1C82000871C008176BA /* LeftViewController.m in Sources */,
+				692D4E63201D9969006B88DF /* AnimatedAnnotationView.m in Sources */,
 				69F7E74F2015C1A6007CFE9E /* BaseTableViewController.m in Sources */,
 				699A06F82018577700DD4461 /* IFMMenuItem.m in Sources */,
 				6962040920173D2F00402D0C /* MBProgressHUD.m in Sources */,
@@ -825,23 +951,33 @@
 				69E625D62011B27900A23880 /* HomeTableViewController.m in Sources */,
 				69F7E74620145513007CFE9E /* ProtocolViewController.m in Sources */,
 				6966A17F20006440008176BA /* AppDelegate.m in Sources */,
+				69585616201EC34F00F86273 /* PrinterInfoView.m in Sources */,
 				696204152017533600402D0C /* PayRecTableViewCell.m in Sources */,
 				69F7E73D20143B6D007CFE9E /* Account.m in Sources */,
+				6958560A201DB45500F86273 /* CustomMAPointAnnotation.m in Sources */,
+				6958560D201DB65000F86273 /* CustomAnnotationView.m in Sources */,
 				6966A1BE20006EAD008176BA /* CWInteractiveTransition.m in Sources */,
 				6966A1CD20008A7E008176BA /* PushViewController.m in Sources */,
+				69E11600201AFDDC005E56CB /* CertificationSccessViewController.m in Sources */,
 				699A06FC2018585800DD4461 /* PrintMemu.m in Sources */,
 				699A06F72018577700DD4461 /* IFMMenuContainerView.m in Sources */,
 				696203FF2016CA6200402D0C /* PrintUploadView.m in Sources */,
 				6966A1C120006EAD008176BA /* CWDrawerTransition.m in Sources */,
+				69F03FFF20204416008E2292 /* FeeView.m in Sources */,
 				6966A1C020006EAD008176BA /* CWLateralSlideAnimator.m in Sources */,
 				696204022016D67600402D0C /* UploadButton.m in Sources */,
+				695856402020090800F86273 /* CorePullScaleImageView.m in Sources */,
+				69585610201DB68300F86273 /* TradingHour.m in Sources */,
 				69E625DC2011B2B400A23880 /* CustomButton.m in Sources */,
 				6966A1D02001AEC2008176BA /* LoginViewController.m in Sources */,
 				699A07062018895D00DD4461 /* HQStepperButton.m in Sources */,
 				69E625DF2011B75300A23880 /* MapViewController.m in Sources */,
 				69620411201752F700402D0C /* RefoundViewController.m in Sources */,
+				69E115FA201AD55D005E56CB /* QRcodeViewController.m in Sources */,
 				69F7E73920141411007CFE9E /* DrawCircleProgressButton.m in Sources */,
+				695856412020090800F86273 /* UIScrollView+PullScale.m in Sources */,
 				69F7E74920145F76007CFE9E /* CommonFunc.m in Sources */,
+				69E1161C201D6A9F005E56CB /* JpDevice.m in Sources */,
 				69AB86B5201295580060C19F /* HomeMidView.m in Sources */,
 				696203ED2015D75100402D0C /* ScanRecCell.m in Sources */,
 				69AB86B220128F460060C19F /* HomeHeaderView.m in Sources */,
@@ -849,13 +985,16 @@
 				6966A1BF20006EAD008176BA /* UIViewController+CWLateralSlide.m in Sources */,
 				69F7E7552015C4BD007CFE9E /* PrintTableViewController.m in Sources */,
 				69E625DB2011B2B400A23880 /* WBTabbar.m in Sources */,
+				69585619201F043D00F86273 /* PrinterInfoViewController.m in Sources */,
 				69E625E52011B77F00A23880 /* MeViewController.m in Sources */,
 				69620419201753FE00402D0C /* PayRec.m in Sources */,
 				696203F62015E20600402D0C /* PrintDetail.m in Sources */,
+				692D4E60201D9943006B88DF /* AnimatedAnnotation.m in Sources */,
 				696203F32015E00E00402D0C /* PrintJobCell.m in Sources */,
 				69F7E735201413BD007CFE9E /* LaunchViewController.m in Sources */,
 				699A06F92018577700DD4461 /* IFMMenu.m in Sources */,
 				699A07042018895D00DD4461 /* HQStepper.m in Sources */,
+				69E115FD201AD5B0005E56CB /* CoverView.m in Sources */,
 				69F7E740201450F3007CFE9E /* UniHttpTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1022,7 +1161,7 @@
 				INFOPLIST_FILE = JustPrintLab/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.justprint.JustPrintLab;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.justprint.JustprintLab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1040,7 +1179,7 @@
 				INFOPLIST_FILE = JustPrintLab/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.justprint.JustPrintLab;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.justprint.JustprintLab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

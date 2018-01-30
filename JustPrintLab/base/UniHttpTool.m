@@ -268,9 +268,9 @@ constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))FData
     NSString*version=@"101280001";
     NSString*params=@"";
     if (acc) {
-        params=[NSString stringWithFormat:@"&_from=app&token=%@&uid=%@&sta_sn=1&i_version=%@",acc.token,uid,version];
+        params=[NSString stringWithFormat:@"&_from=app&token=%@&uid=%@&i_version=%@&_=1497593264486",acc.token,uid,version];
     }else{
-        params=[NSString stringWithFormat:@"&_from=app&uid=%@&sta_sn=1&i_version=%@",uid,version];
+        params=[NSString stringWithFormat:@"&_from=app&uid=%@&i_version=%@",uid,version];
     }
     
     return params;
@@ -298,6 +298,7 @@ constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))FData
         return acc.pid;
     }
 }
+
 +(BOOL)isWechatOrAlipay{
     NSString* file=[DocumentFile stringByAppendingString:@"/accout.data"];
     Account * acc=[NSKeyedUnarchiver unarchiveObjectWithFile:file];

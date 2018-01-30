@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"printer_dft"] forBarMetrics:UIBarMetricsDefault];
+    self.navigationBar.barTintColor=mainColor;
+    self.navigationBar.translucent=NO;
     [self.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName, nil]];
     self.navigationBar.tintColor=[UIColor whiteColor];
 }
@@ -28,6 +29,8 @@
     }
     [super pushViewController:viewController animated:animated];
 }
-
+-(void)close{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end

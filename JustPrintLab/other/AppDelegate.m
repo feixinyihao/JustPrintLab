@@ -8,7 +8,8 @@
 
 #import "AppDelegate.h"
 #import "LaunchViewController.h"
-
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import "CommonFunc.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    //注册高德
+    [AMapServices sharedServices].apiKey = AMapKey;
     [self setMainInterface];
     return YES;
 }
@@ -44,6 +47,9 @@
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    [CommonFunc getBalance:^(id json) {
+         DLog(@"ddd");
+    }];
    
 }
 

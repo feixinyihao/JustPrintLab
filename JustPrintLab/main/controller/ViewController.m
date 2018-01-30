@@ -15,6 +15,7 @@
 #import "ScanTableViewController.h"
 #import "PrintTableViewController.h"
 #import "CommonFunc.h"
+#import "QRcodeViewController.h"
 
 @interface ViewController ()<HomeHeaderViewDelegate>
 
@@ -32,6 +33,9 @@
     self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(leftClick)];
 
 
+    UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] init];
+    temporaryBarButtonItem.title =@"返回";
+    self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
     //更改状态栏颜色
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
 
@@ -52,6 +56,7 @@
    
     HomeHeaderView *headerView=[[HomeHeaderView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenWidth*2/3)];
     headerView.delegate=self;
+ 
     [scroll addSubview:headerView];
     
   
@@ -114,6 +119,11 @@
 -(void)HomeHeaderViewButton:(UIButton *)button{
     NSArray*titleArr=@[@"图片打印",@"证件打印",@"发票打印",@"照片打印",@"扫一扫"];
     DLog(@"%@",titleArr[button.tag-1000]);
+    if (button.tag==1004) {
+        QRcodeViewController*qrcode=[[QRcodeViewController alloc]init];
+        [self.navigationController pushViewController:qrcode animated:YES];
+        
+    }
 }
 
 

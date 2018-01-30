@@ -463,7 +463,7 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
  token过期返回登录页面
  */
 +(void)backToLogon{
-   
+    [MBProgressHUD showText:@"请重新登录"];
         // 获取要删除的路径
     NSString *deletePath = [DocumentFile stringByAppendingPathComponent:@"/accout.data"];
         // 创建文件管理对象
@@ -570,5 +570,50 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
     return [str stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 }
 
++(BOOL)isincluded:(NSString*)str in:(NSString*)supStr{
+    
+    if([supStr rangeOfString:str].location !=NSNotFound){
+        return YES;
+    }else
+        return NO;
+}
+/**
+ 403 表示理光内嵌  103 表示施乐内嵌  601 桌面打印机  503 照片打印
+ */
 
++(NSString*)fromModel:(NSInteger)model{
+    switch (model) {
+        case 403:
+            return @"理光内嵌";
+            break;
+        case 103:
+            return @"施乐内嵌";
+            break;
+        case 601:
+            return @"桌面打印机";
+            break;
+        case 503:
+            return @"照片打印";
+            break;
+        case 0:
+            return @"人工";
+            break;
+        default:
+            return @"未知";
+            break;
+    }
+}
++(NSString*)fromStrTime:(NSString*)time{
+    time=[NSString stringWithFormat:@"%@",time];
+    if ([time integerValue]==0) {
+        return @"00:00";
+    }else if (time.length==3){
+        time=[@"0" stringByAppendingString:time];
+        return [NSString stringWithFormat:@"%@:%@",[time substringWithRange:NSMakeRange(0, 2)],[time substringWithRange:NSMakeRange(2, 2)]];
+    }else if (time.length==4){
+        return [NSString stringWithFormat:@"%@:%@",[time substringWithRange:NSMakeRange(0, 2)],[time substringWithRange:NSMakeRange(2, 2)]];
+    }else{
+        return @"未知";
+    }
+}
 @end

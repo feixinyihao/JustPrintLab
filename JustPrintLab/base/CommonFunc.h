@@ -51,5 +51,17 @@
 + (void)actionSheet:(NSString*)title1 withTitle2:(NSString*)title2;
 +(NSString*)stringByTrim:(NSString*)str;
 
+/**
+ 字符串是否包含某个字符串
+ */
++(BOOL)isincluded:(NSString*)str in:(NSString*)supStr;
+/**
+ 403 表示理光内嵌  103 表示施乐内嵌  601 桌面打印机  503 照片打印
+ */
++(NSString*)fromModel:(NSInteger)model;
 
+/**
+ 返回加冒号的时间
+ */
++(NSString*)fromStrTime:(NSString*)time;
 @end

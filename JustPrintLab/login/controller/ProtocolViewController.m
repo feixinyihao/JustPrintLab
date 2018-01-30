@@ -22,6 +22,7 @@
     self.title=self.navTitle;
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor],NSForegroundColorAttributeName,[UIFont systemFontOfSize:17],NSFontAttributeName, nil]];
     UIButton*closeBtn=[[UIButton alloc]init];
+    [closeBtn setFrame:CGRectMake(0, 0, 30, 30)];
     [closeBtn setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
     [closeBtn addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem*left=[[UIBarButtonItem alloc]initWithCustomView:closeBtn];

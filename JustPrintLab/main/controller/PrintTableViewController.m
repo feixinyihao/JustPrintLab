@@ -22,6 +22,7 @@
 #import "IFMMenuItem.h"
 #import "CommonFunc.h"
 #import <ESPictureBrowser.h>
+#import "QRcodeViewController.h"
 @interface PrintTableViewController ()<UITableViewDataSource,UITableViewDelegate,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate,PrintUploadViewDelegate,TZImagePickerControllerDelegate,PrintMemuDelegate,ESPictureBrowserDelegate>
 @property(nonatomic,strong)NSMutableArray*dataArr;
 @property(nonatomic,strong)UITableView*tableView;
@@ -41,6 +42,10 @@
     self.title=@"打印任务";
     [self setupTableView];
   
+    
+    UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] init];
+    temporaryBarButtonItem.title =@"返回";
+    self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
    
     
     self.tableView.mj_header=[MJRefreshNormalHeader headerWithRefreshingBlock:^{
@@ -51,12 +56,12 @@
     [self.tableView.mj_header beginRefreshing];
     //通知中心是个单例
     NSNotificationCenter *notiCenter = [NSNotificationCenter defaultCenter];
-    // 注册一个监听事件。第三个参数的事件名， 系统用这个参数来区别不同事件。
     [notiCenter addObserver:self selector:@selector(setupData) name:@"refresh" object:nil];
 
 }
 -(void)setupRightItem{
     UIButton*rightBtn=[[UIButton alloc]init];
+    rightBtn.frame=CGRectMake(0, 0, 30, 30);
     [rightBtn setImage:[UIImage imageNamed:@"upload"] forState:UIControlStateNormal];
     [rightBtn addTarget:self action:@selector(upload) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem*item=[[UIBarButtonItem alloc]initWithCustomView:rightBtn];
@@ -79,11 +84,16 @@
         btn.layer.cornerRadius=5;
         [btn setTitle:@"扫码取件" forState:UIControlStateNormal];
         btn.tag=1000;
+        [btn addTarget:self action:@selector(scanQrCode) forControlEvents:UIControlEventTouchUpInside];
         self.scanBtn=btn;
        [self.view addSubview:self.scanBtn];
     }
     
     
+}
+-(void)scanQrCode{
+    QRcodeViewController*qr=[[QRcodeViewController alloc]init];
+    [self.navigationController pushViewController:qr animated:YES];
 }
 - (void)dealloc {
     DLog(@"%s",__func__);
@@ -180,7 +190,7 @@
                 self.tempCell=[tableView cellForRowAtIndexPath:indexPath];
                 ESPictureBrowser*pictureBrowser=[[ESPictureBrowser alloc]init];
                 pictureBrowser.pageTextCenter=CGPointMake(ScreenWidth/2, 30);
-                pictureBrowser.pageTextFont=[UIFont fontWithName:@"Arial-BoldMT" size:16];
+                pictureBrowser.pageTextFont=[UIFont fontWithName:@"Arial-BoldMT" size:18];
                 pictureBrowser.delegate=self;
                 [pictureBrowser showFromView:self.tempCell picturesCount:imageCount currentPictureIndex:0];
             } failure:^(NSError *error) {
@@ -283,7 +293,8 @@
     imagepick.allowPickingGif=NO;
     imagepick.allowPickingVideo=NO;
     [self presentViewController:imagepick animated:YES completion:nil];
-    [imagepick.navigationBar setBackgroundImage:[UIImage imageNamed:@"printer_dft"] forBarMetrics:UIBarMetricsDefault];
+    imagepick.navigationBar.barTintColor=mainColor;
+    imagepick.navigationBar.translucent=NO;
     imagepick.isStatusBarDefault = NO;
     imagepick.allowPickingOriginalPhoto=NO;
 }

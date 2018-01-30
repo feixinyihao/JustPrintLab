@@ -55,4 +55,5 @@
 +(NSString*)getHeadImgUrl;
 +(NSInteger)getNativeBalance;
 +(NSInteger)getNativeSubsidy;
+
 @end

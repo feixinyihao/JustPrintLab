@@ -117,7 +117,7 @@
             }
         }
         case 1:
-            if (indexPath.row==0) {
+            if (indexPath.row==0&&indexPath.section==1) {
                 [CommonFunc alert:@"是否清除缓存?" withMessage:nil:^(UIAlertAction *acton) {
                     [self clearCache];
                     [MBProgressHUD showText:@"清除成功！"];
@@ -139,7 +139,10 @@
         if (error) {
             DLog(@"erroe_%@",[error userInfo]);
         }else{
-            [self presentViewController:storeProductViewContorller animated:YES completion:nil];
+            if (result) {
+                [self presentViewController:storeProductViewContorller animated:YES completion:nil];
+            }
+           
         }
     }];
    

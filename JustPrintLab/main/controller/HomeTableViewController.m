@@ -38,11 +38,16 @@
    // childView.tabBarItem.imageInsets = UIEdgeInsetsMake(0, 0, 2, 0);
     [childView.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -1)];
     childView.title=title;
-    
     childView.tabBarItem.image=[[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     childView.tabBarItem.selectedImage=[[UIImage imageNamed:selectedImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    BaseNavigationController * childViewNav=[[BaseNavigationController alloc]initWithRootViewController:childView];
-    [self addChildViewController:childViewNav];
+    if ([childView isKindOfClass:[MapViewController class]]) {
+        UINavigationController* childViewNav=[[UINavigationController alloc]initWithRootViewController:childView];
+        [self addChildViewController:childViewNav];
+    }else{
+        BaseNavigationController * childViewNav=[[BaseNavigationController alloc]initWithRootViewController:childView];
+        [self addChildViewController:childViewNav];
+    }
+    
     
 }
 /**

@@ -93,7 +93,8 @@
 -(void)setupView{
     
     self.typeImageView.frame=CGRectMake(5, 15, 50, 50);
-    self.szDocumentLabel.frame=CGRectMake(60, 15, ScreenWidth-120-60, 15);
+    CGFloat docW=kIs_iphone5?ScreenWidth-65:ScreenWidth-120-60;
+    self.szDocumentLabel.frame=CGRectMake(60, 15, docW, 15);
     self.configure.frame=CGRectMake(88, 35, 140, 20);
     self.copies.frame=CGRectMake(60, 35, 35, 20);
     NSString*str;
@@ -159,7 +160,9 @@
 
     
     self.configure.font=[UIFont systemFontOfSize:12];
-    [self.dwRandomCodeLabel setFrame:CGRectMake(ScreenWidth-140, 30, 120, 20)];
+    //取件码
+    CGFloat y=kIs_iphone5?55:30;
+    [self.dwRandomCodeLabel setFrame:CGRectMake(ScreenWidth-140, y, 120, 20)];
     self.dwRandomCodeLabel.backgroundColor=JpColor(240, 240, 240);
     self.dwRandomCodeLabel.layer.cornerRadius=10;
     self.dwRandomCodeLabel.layer.masksToBounds=YES;
@@ -169,8 +172,6 @@
     self.dwSubmitDateLabel.font=[UIFont systemFontOfSize:11];
     self.dwRandomCodeLabel.font=[UIFont systemFontOfSize:12];
     self.szDocumentLabel.text=self.item.szDocument;
-    UIImageView* takethings_backimage=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"takethings_backimage"]];
-    takethings_backimage.frame=CGRectMake(ScreenWidth-140, 40, 130, 22);
     self.dwRandomCodeLabel.text=[NSString stringWithFormat:@"取件码:%@",self.item.dwRandomCode];
    
     NSString*dwSubmitTime=[NSString stringWithFormat:@"%@",self.item.dwSubmitTime];
